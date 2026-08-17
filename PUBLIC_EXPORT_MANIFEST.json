@@ -94,12 +94,12 @@
     },
     {
       "path": "RELEASE_NOTES.md",
-      "sha256": "67882b42f17ccae9785f92ab05a12d8836e1185bf261eb290ff7ce9f8607fe0b",
+      "sha256": "7a0a14e3181f229370aced9fba345de04662a5c6c47796291102533f27348594",
       "mode": "0644"
     },
     {
       "path": "SECURITY.md",
-      "sha256": "6d1352688eb7072115c142fc608263788fb8bbafd0db4bd7b88e006ec95227ad",
+      "sha256": "e8576e15d295155501f755494509709d61d09c6ede7ebf714df3f0942da65987",
       "mode": "0644"
     },
     {
@@ -164,7 +164,7 @@
     },
     {
       "path": "docs/github-public-settings.md",
-      "sha256": "7563f0c5b415f18d5d55f51e961d5ad87e7a3b10234ddf281525719bd98aad95",
+      "sha256": "b31368d2504c2216d43247452a87dacbf137ec6355297d3cd6131e0d38266973",
       "mode": "0644"
     },
     {

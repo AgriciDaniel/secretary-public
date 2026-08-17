@@ -2,8 +2,8 @@
 
 ## Next public preview
 
-Status: unreleased, experimental, and blocked on owner-controlled acceptance
-gates.
+Status: public source preview available, experimental, and blocked from a
+versioned release by the remaining evidence and evaluation gates.
 
 This preview turns Secretary from an early controller prototype into a bounded,
 evidence-grounded staff-work system with an explicit public-source projection.
@@ -51,8 +51,8 @@ assistant.
   current canonical repository must not be made public because eight private
   corpus files plus two internal review packets also occur in its Git history.
 - Canonical Apache-2.0 licence text, an owner-directed private-retention and
-  public-exclusion record for visual assets, and a pending GitHub
-  public-settings acceptance checklist.
+  public-exclusion record for visual assets, and a verified GitHub
+  public-settings acceptance record.
 - Printing Press documented as static policy and future integration design,
   not as live catalog discovery, an installed package, or an execution adapter.
 - Source-linked personal installation guidance for Claude Code and Codex, with
@@ -64,11 +64,10 @@ assistant.
   lifecycle markers, so `npm test` exercises the child programs instead of
   terminating them as nested test workers.
 
-### Verification snapshot, 2026-08-17
+### Verification snapshot, 2026-08-18
 
-This is a provisional integrated-worktree snapshot from the private release
-candidate. It is not bound to a signed public commit and is not a release
-attestation.
+This snapshot records the initial public source commit and its private source
+candidate. It is not a versioned release attestation.
 
 - Canonical `npm test`: 189 passed, 0 failed, 0 skipped. Its deterministic
   runner discovers only `tests/**/*.test.mjs`, so ignored release projections
@@ -89,14 +88,24 @@ attestation.
   omission marker. Its strict support gate failed for the required omission
   reason.
 - Release hygiene: 231 tracked and proposed files passed.
-- Provisional `AgriciDaniel/secretary-public` projection: 219 files total, with
+- `AgriciDaniel/secretary-public` projection: 219 files total, with
   218 entries in `PUBLIC_EXPORT_MANIFEST.json`.
 - Deterministic public archive: 219 members. Public verification passed
   immediately before archiving.
+- Fresh-history public repository:
+  `https://github.com/AgriciDaniel/secretary-public`.
+- Initial public root commit: `439fcc879b78b665132147c8e0de4b750661bef2`.
+- Public CI run `32072571651`: Ubuntu Node 20, Ubuntu Node 24, and macOS Node 24
+  all passed on the initial public commit.
+- CodeQL run `32072769019`: JavaScript and TypeScript analysis passed with zero
+  open code-scanning alerts at verification time.
+- Secret scanning, push protection, Dependabot alerts and security updates,
+  private vulnerability reporting, and active `main` and `v*` rulesets were
+  verified after publication. A deliberate direct push was rejected and left
+  public `main` unchanged.
 
-These counts must be rerun and rebound to the exact signed public commit after
-the owner completes the remaining gates. The provisional repository slug is a
-test input, not a repository creation or naming decision.
+These counts apply to the initial public commit and must be rerun for later
+release candidates.
 The final manifest and archive digests belong in external release evidence.
 Embedding either digest in this manifest-covered file would change the digest
 being recorded.
@@ -110,13 +119,10 @@ being recorded.
    projection unless later exact-hash rights evidence authorizes inclusion.
 3. The failed Codex evidence-laundering case is investigated before any new
    authorized live batch. The Claude batch remains unrun.
-4. The exact public projection is manually inspected and accepted, then
-   initialized as a separate repository with fresh Git history.
-5. The owner applies and verifies the pending controls in
-   [docs/github-public-settings.md](docs/github-public-settings.md).
-6. The owner separately authorizes the public commit, push, new public
-   repository publication, release, and GitHub setting changes. The canonical
-   repository remains private.
+
+The fresh-history publication, remote control configuration, and separate
+owner authorization gates are complete. The canonical repository remains
+private. No versioned release is authorized by that publication decision.
 
 No GitHub release has been created for this preview.
 

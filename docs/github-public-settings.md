@@ -1,12 +1,13 @@
 # Public repository settings checklist
 
-Status: all remote settings pending. This file records intended acceptance
-checks only. A checked box in this repository would not by itself prove a
-GitHub setting is active.
+Status: public preview controls applied and verified on 2026-08-18. This file
+retains the remaining acceptance checks and records the verified remote state.
+A checked box does not replace a fresh API or signed-out check.
 
-Target: `AgriciDaniel/secretary-public`. A read-only API check on `2026-08-17`
-returned `404 Not Found`, so the proposed repository did not exist and none of
-the settings below were active at that time.
+Target: `AgriciDaniel/secretary-public`. The repository was created privately
+from a 219-file allowlisted projection, verified, and then made public with one
+fresh-history root commit. The canonical `AgriciDaniel/secretary` repository
+remains private.
 
 The canonical development repository contains private research material and
 must remain private. Create the public repository from a manually inspected,
@@ -16,29 +17,29 @@ remote.
 
 ## Publication topology
 
-- [ ] Reconfirm that the approved public target is
+- [x] Reconfirm that the approved public target is
   `AgriciDaniel/secretary-public` and that it is still unoccupied.
-- [ ] Generate and verify the public projection from the exact accepted
+- [x] Generate and verify the public projection from the exact accepted
   canonical source state.
-- [ ] Confirm the projection contains no `.git` directory and initialize new
+- [x] Confirm the projection contains no `.git` directory and initialize new
   Git history from its files only.
-- [ ] Create the public target as an empty private repository. Do not ask GitHub
+- [x] Create the public target as an empty private repository. Do not ask GitHub
   to add a README, licence, or `.gitignore`, because those bytes come from the
   accepted projection.
-- [ ] Set the fresh local branch to `main`, make and verify one signed initial
+- [x] Set the fresh local branch to `main`, make and verify one signed initial
   commit, then push only that fresh branch to the private target. Do not add the
   canonical repository as a push source for the public target.
-- [ ] Confirm `main` is the default branch and confirm the public target shares
+- [x] Confirm `main` is the default branch and confirm the public target shares
   no commit ID or Git reference with the canonical repository.
-- [ ] Manually inspect the exact projected tree, including
+- [x] Manually inspect the exact projected tree, including
   `PUBLIC_EXPORT_MANIFEST.json`, `NOTICE`, `LICENSE`, and
   [asset provenance](../assets/PROVENANCE.md).
-- [ ] Confirm all public-facing clone, issue, security, support, package, and
+- [x] Confirm all public-facing clone, issue, security, support, package, and
   release references resolve in the selected public repository.
-- [ ] Apply every setting available while the target is private and run CI. If
+- [x] Apply every setting available while the target is private and run CI. If
   the account plan does not enforce rulesets on a private repository, record
   that limitation and do not describe the branch as protected.
-- [ ] Record a separate owner authorization for changing only the fresh target
+- [x] Record a separate owner authorization for changing only the fresh target
   from private to public. The canonical repository remains private.
 - [ ] Immediately after the visibility change, activate and test any ruleset
   that was plan-limited while private, then enable and test the public-only
@@ -48,25 +49,25 @@ remote.
 
 ## Access and branch governance
 
-- [ ] Keep default workflow permissions read-only. Leave permission escalation
+- [x] Keep default workflow permissions read-only. Leave permission escalation
   explicit at the individual job level only when it is required and reviewed.
-- [ ] Keep workflow-created pull-request approvals disabled.
-- [ ] Create one active ruleset targeting the default branch `main`.
+- [x] Keep workflow-created pull-request approvals disabled.
+- [x] Create one active ruleset targeting the default branch `main`.
 - [ ] Require a pull request and at least one approving review before merge.
 - [ ] Dismiss stale approvals when new commits are pushed and require approval
   of the most recent reviewable push.
-- [ ] Require conversation resolution before merge.
-- [ ] Require the branch to be up to date before merge.
-- [ ] Block force pushes and deletion. Do not grant a routine bypass. If an
+- [x] Require conversation resolution before merge.
+- [x] Require the branch to be up to date before merge.
+- [x] Block force pushes and deletion. Do not grant a routine bypass. If an
   emergency maintainer bypass is retained, name the actor, scope, reason, and
   review procedure in the settings evidence.
-- [ ] Require every CI matrix check after it has run once in the public
+- [x] Require every CI matrix check after it has run once in the public
   repository: `verify (ubuntu-latest, Node 20)`,
   `verify (ubuntu-latest, Node 24)`, and
   `verify (macos-latest, Node 24)`. Bind required
   checks to GitHub Actions as the expected source where the repository plan
   supports it.
-- [ ] Do not require the older canonical-PR names `verify (20)` or
+- [x] Do not require the older canonical-PR names `verify (20)` or
   `verify (24)`. Those checks came from the workflow before the current
   OS-labelled three-job matrix and are not the proposed public check names.
 - [ ] Require verified signed commits on `main` after a test pull request proves
@@ -86,21 +87,21 @@ and [available rules](https://docs.github.com/en/repositories/configuring-branch
 
 ## Actions supply-chain policy
 
-- [ ] Allow only GitHub-authored actions required by the checked-in workflow:
+- [x] Allow only GitHub-authored actions required by the checked-in workflow:
   `actions/checkout` and `actions/setup-node`. No reusable workflow or
   third-party action is currently required.
 - [ ] Enable the repository or organization policy that requires actions to be
   pinned to a full-length commit SHA.
-- [ ] Recheck every `uses:` reference in the exact public commit.
-- [ ] Confirm Actions default workflow permissions are `read` and workflows
+- [x] Recheck every `uses:` reference in the exact public commit.
+- [x] Confirm Actions default workflow permissions are `read` and workflows
   cannot create or approve pull-request reviews.
 - [ ] Require approval before workflows from forked pull requests run for
   outside contributors. Review GitHub's current fork policy rather than assuming
   private-repository defaults carry into the public repository.
-- [ ] Confirm no public pull request can run untrusted code on a self-hosted
+- [x] Confirm no public pull request can run untrusted code on a self-hosted
   runner or access publication, signing, deployment, provider, or production
   credentials.
-- [ ] Confirm the three CI jobs run only on GitHub-hosted
+- [x] Confirm the three CI jobs run only on GitHub-hosted
   `ubuntu-latest` and `macos-latest` runners, with a 20-minute job timeout and
   concurrency cancellation enabled.
 
@@ -110,10 +111,10 @@ setting](https://docs.github.com/en/repositories/managing-your-repositorys-setti
 
 ## Security reporting and analysis
 
-- [ ] Enable the dependency graph and Dependabot alerts. The current package has
+- [x] Enable the dependency graph and Dependabot alerts. The current package has
   no lockfile and no runtime dependencies, so an empty alert set is plausible
   but is not proof that the feature is enabled.
-- [ ] Decide whether to enable Dependabot security updates. If GitHub Actions
+- [x] Decide whether to enable Dependabot security updates. If GitHub Actions
   update automation is wanted, add and review a separate `github-actions`
   Dependabot configuration in a future code change.
 - [ ] Enable code scanning for JavaScript with a reviewed GitHub CodeQL
@@ -121,16 +122,16 @@ setting](https://docs.github.com/en/repositories/managing-your-repositorys-setti
   check result in the `main` ruleset.
 - [ ] Enable secret scanning and push protection. Test the push-protection
   control with a GitHub-provided safe test pattern, never with a live secret.
-- [ ] Enable private vulnerability reporting after the repository is public.
-- [ ] From a non-admin view, confirm the Security tab exposes a private `Report
+- [x] Enable private vulnerability reporting after the repository is public.
+- [x] From a non-admin view, confirm the Security tab exposes a private `Report
   a vulnerability` path and that it does not route to a public issue. Confirm
   the exact URL
   `https://github.com/AgriciDaniel/secretary-public/security/advisories/new`
   works while signed out or from an account without repository access.
 - [ ] Configure and test maintainer notifications for private reports.
-- [ ] Review the Security tab with no unresolved alerts before release. Record
+- [x] Review the Security tab with no unresolved alerts before release. Record
   unavailable features separately rather than marking them passed.
-- [ ] Confirm `SECURITY.md` is visible from the Security tab and that public
+- [x] Confirm `SECURITY.md` is visible from the Security tab and that public
   issues and community links do not invite sensitive vulnerability details.
 
 GitHub documents [private vulnerability reporting](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/configure-for-a-repository)
@@ -138,27 +139,27 @@ and [repository security and analysis settings](https://docs.github.com/en/repos
 
 ## Metadata and community health
 
-- [ ] Confirm GitHub detects `LICENSE` as Apache License 2.0 on the exact public
+- [x] Confirm GitHub detects `LICENSE` as Apache License 2.0 on the exact public
   commit. Treat `NOASSERTION`, a missing licence badge, or a mismatched licence
   as a release blocker to investigate.
-- [ ] Enable Issues. Keep Discussions disabled at launch because general
+- [x] Enable Issues. Keep Discussions disabled at launch because general
   discussion is routed to the Free and Pro AI Marketing Hub communities. Enable
   Discussions later only with a named moderation and support policy.
-- [ ] Keep Wiki and Projects disabled unless a maintained public use is approved.
-- [ ] Create or confirm the exact labels used by issue forms: `bug`,
+- [x] Keep Wiki and Projects disabled unless a maintained public use is approved.
+- [x] Create or confirm the exact labels used by issue forms: `bug`,
   `enhancement`, and `documentation`. The issue forms do not require a
   `research` label.
-- [ ] Apply this exact description: `Evidence-grounded AI secretary for Claude
+- [x] Apply this exact description: `Evidence-grounded AI secretary for Claude
   Code and Codex, with frozen context, deterministic retrieval, bounded quality
   review, and explicit human approval gates.`
-- [ ] Apply the homepage `https://www.skool.com/ai-marketing-hub` and all 20
+- [x] Apply the homepage `https://www.skool.com/ai-marketing-hub` and all 20
   topics from [repository metadata](repository-metadata.md).
-- [ ] Verify the Free AI Marketing Hub and AI Marketing Hub Pro links in the
+- [x] Verify the Free AI Marketing Hub and AI Marketing Hub Pro links in the
   README, support guide, and issue-template configuration from a signed-out
   view.
-- [ ] Verify the issue forms, support links, contribution guide, Code of Conduct,
+- [x] Verify the issue forms, support links, contribution guide, Code of Conduct,
   security policy, and pull-request template from a signed-out view.
-- [ ] Enable automatic deletion of merged branches unless the maintainer has a
+- [x] Enable automatic deletion of merged branches unless the maintainer has a
   documented reason to retain them.
 
 ## Visibility rollback and incident response
@@ -182,9 +183,38 @@ and [repository security and analysis settings](https://docs.github.com/en/repos
 
 ## Final evidence record
 
-After settings are applied with explicit owner authorization, record the public
-repository URL, exact commit, inspection date, setting reviewer, CI run URLs,
-ruleset and security-setting snapshots, signed release tag, non-admin security
-reporting result, and any plan-limited exceptions in the release evidence.
-Until then, every item in this file remains pending and no remote governance
-claim is established.
+Live evidence recorded on 2026-08-18:
+
+- Public repository: `https://github.com/AgriciDaniel/secretary-public`.
+- Initial root commit: `439fcc879b78b665132147c8e0de4b750661bef2`.
+- Initial tree: `dfbfab0d5b6322702f5d658647bfca196584bdc0`.
+- Initial CI run: `https://github.com/AgriciDaniel/secretary-public/actions/runs/32072571651`.
+- CodeQL run: `https://github.com/AgriciDaniel/secretary-public/actions/runs/32072769019`.
+- Active rulesets: `Protect main` with ID `20958036`, and
+  `Protect release tags` with ID `20958040`.
+- The `main` ruleset requires pull requests, strict success from the three CI
+  jobs, linear history, resolved review threads, and blocks deletion and force
+  pushes. A direct-push negative control was rejected and left `main`
+  unchanged.
+- Apache-2.0 detection, 100 percent community-profile health, public anonymous
+  repository access, and the private vulnerability-report URL returned the
+  expected results.
+- Code scanning, secret scanning, and Dependabot each reported zero open alerts
+  at verification time. Zero alerts is a point-in-time result, not a guarantee.
+
+Known exceptions remain explicit:
+
+- The only current maintainer cannot provide an independent approval, so the
+  pull-request rule requires zero approvals. Do not mark the one-review gate
+  complete until another qualified reviewer exists.
+- The initial commit verifies locally with the owner's SSH signing key, but
+  GitHub reports `unknown_key`. Required signed commits therefore remain off.
+- CodeQL default setup is enabled and passed, but its check is not required by
+  the ruleset because GitHub excludes default-setup runs from fork pull
+  requests. Requiring it would block outside contributions.
+- Secret scanning and push protection are enabled, but no test token was pushed.
+  The API state and zero-alert result do not replace a safe negative control.
+- Repository-level enforcement of full-SHA action references was not available;
+  the two checked-in GitHub-authored actions are pinned to exact commit SHAs.
+- Private-report notification delivery, fork-workflow approval behavior,
+  public release tags, and a signed GitHub release remain untested or absent.
