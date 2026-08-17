@@ -113,7 +113,7 @@ The projection omits the private research digest, the claim locator registry, al
 
 The source ledger and brain notes remain included for provenance, architecture review, and bounded operation. Some notes contain short quotations, factual source metadata, and paraphrases. This export process does not decide whether every remaining use is licensed, non-infringing, or suitable in every jurisdiction. Publication still requires the owner's claim-level rights judgment.
 
-Pending visual assets are omitted. Their inventory remains in assets/PROVENANCE.md, and the public README replaces their image tags with an omission notice. A visual can enter a future projection only when the provenance inventory records its exact SHA-256 with the exact status Owner approved and a named, dated owner sign-off approves the same hash with a non-pending evidence location. Filename continuity, Git history, or file presence is not approval.
+Visual assets are governed by assets/PROVENANCE.md. An exact visual is included only when its inventory row records its current SHA-256 with the exact status Owner approved and a named, dated owner sign-off approves the same hash with a non-pending evidence location. Any pending visual is omitted, and its public README image tag is replaced with an omission notice. Filename continuity, Git history, or file presence is not approval.
 
 The strict human-support gate intentionally fails in this projection because the evidence required to support those claims was omitted. Do not treat an empty public claim-evidence registry as proof that no support review is needed.
 `;
@@ -279,8 +279,12 @@ async function canonicalRepository(root) {
   return githubSlugFromPackageMetadata(packageMetadata);
 }
 
-function publicExportMarker(repository) {
-  return { ...PUBLIC_EXPORT_MARKER, public_repository: repository };
+function publicExportMarker(repository, omittedPendingVisualAssets = true) {
+  return {
+    ...PUBLIC_EXPORT_MARKER,
+    omitted_pending_visual_assets: omittedPendingVisualAssets,
+    public_repository: repository,
+  };
 }
 
 export function rewriteRepositoryUrls(bytes, canonical, repository) {
@@ -411,7 +415,7 @@ export async function collectPublicSourceFiles(root = PROJECT_ROOT) {
   return selected.sort(byteSort);
 }
 
-async function writeSynthesizedFiles(outputRoot, repository) {
+async function writeSynthesizedFiles(outputRoot, repository, omittedPendingVisualAssets) {
   await writeFile(path.join(outputRoot, 'PUBLIC_EXPORT_NOTICE.md'), PUBLIC_NOTICE, { mode: 0o644 });
   await mkdir(path.join(outputRoot, 'docs'), { recursive: true, mode: 0o755 });
   await writeFile(path.join(outputRoot, 'docs', 'claim-rights-review.md'), PUBLIC_RIGHTS_REVIEW, { mode: 0o644 });
@@ -420,7 +424,7 @@ async function writeSynthesizedFiles(outputRoot, repository) {
   await writeFile(path.join(outputRoot, 'references', 'claim-evidence.json'), '[]\n', { mode: 0o644 });
   await writeFile(
     path.join(outputRoot, 'references', 'public-export.json'),
-    `${JSON.stringify(publicExportMarker(repository), null, 2)}\n`,
+    `${JSON.stringify(publicExportMarker(repository, omittedPendingVisualAssets), null, 2)}\n`,
     { mode: 0o644 },
   );
   await writeFile(path.join(outputRoot, 'references', 'research-digest.md'), PUBLIC_RESEARCH_DIGEST, { mode: 0o644 });
@@ -524,6 +528,12 @@ export async function verifyPublicTree(root) {
     failures.push(error.message);
   }
   if (provenance) {
+    const publicFileSet = new Set(files);
+    for (const [relative, record] of provenance.records) {
+      if (record.status === OWNER_APPROVED_ASSET_STATUS && !publicFileSet.has(relative)) {
+        failures.push(`${relative}: owner-approved visual asset is missing`);
+      }
+    }
     for (const relative of files.filter(isPublicVisualAsset)) {
       const bytes = await readFile(path.join(absoluteRoot, relative));
       if (!isAssetOwnerApproved(provenance, relative, bytes)) {
@@ -544,7 +554,17 @@ export async function verifyPublicTree(root) {
   try {
     marker = JSON.parse(markerText);
     const repository = normalizePublicRepository(marker.public_repository);
-    if (markerText !== `${JSON.stringify(publicExportMarker(repository), null, 2)}\n`) {
+    if (typeof marker.omitted_pending_visual_assets !== 'boolean') {
+      failures.push('references/public-export.json: visual omission marker must be boolean');
+    }
+    if (
+      marker.omitted_pending_visual_assets === false
+      && provenance
+      && [...provenance.records.values()].some((record) => record.status !== OWNER_APPROVED_ASSET_STATUS)
+    ) {
+      failures.push('references/public-export.json: claims no pending visual omission while provenance remains pending');
+    }
+    if (markerText !== `${JSON.stringify(publicExportMarker(repository, marker.omitted_pending_visual_assets), null, 2)}\n`) {
       failures.push('references/public-export.json: public omission marker drift');
     }
     const packageMetadata = JSON.parse(await readFile(path.join(absoluteRoot, 'package.json'), 'utf8'));
@@ -576,7 +596,7 @@ export async function assertPrivateCorpusBytesAbsent(sourceRoot, outputRoot) {
   if (await exists(markerPath)) {
     const sourceMarker = JSON.parse(await readFile(markerPath, 'utf8'));
     const repository = normalizePublicRepository(sourceMarker.public_repository);
-    const expectedMarker = `${JSON.stringify(publicExportMarker(repository), null, 2)}\n`;
+    const expectedMarker = `${JSON.stringify(publicExportMarker(repository, sourceMarker.omitted_pending_visual_assets), null, 2)}\n`;
     const expectedPublicFiles = new Map([
       ['docs/claim-rights-review.md', PUBLIC_RIGHTS_REVIEW],
       ['docs/claim-support-review.md', PUBLIC_SUPPORT_REVIEW],
@@ -685,7 +705,7 @@ export async function exportPublicTree({
       else await writeFile(destination, outputBytes, { flag: 'wx' });
       await chmod(destination, metadata.mode & 0o111 ? 0o755 : 0o644);
     }
-    await writeSynthesizedFiles(temporary, publicRepository);
+    await writeSynthesizedFiles(temporary, publicRepository, omittedVisuals.size > 0);
     await assertRepositoryTargetApplied(temporary, sourceRepository, publicRepository);
     const manifest = await buildManifest(temporary);
     await writeFile(path.join(temporary, MANIFEST_PATH), `${JSON.stringify(manifest, null, 2)}\n`, { mode: 0o644 });

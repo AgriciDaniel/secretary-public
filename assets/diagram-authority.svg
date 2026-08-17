@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520" role="img" aria-label="Authority ladder: unattended, with notice, and explicit per action approval. Effective authority is the intersection of five constraints and can only narrow.">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15171B"/>
+      <stop offset="1" stop-color="#0E1013"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="520" fill="url(#bg2)"/>
+
+  <text x="80" y="86" font-family="Georgia, 'Iowan Old Style', serif" font-size="42" fill="#EFEDE7">Authority ladder</text>
+  <g>
+    <line x1="80" y1="112" x2="420" y2="112" stroke="#8C2432" stroke-width="1"/>
+    <circle cx="250" cy="112" r="3.5" fill="#E0C173"/>
+  </g>
+  <text x="80" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#7C8290">A profile may narrow authority. Nothing widens it.</text>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <!-- rung 1 -->
+    <rect x="80" y="196" width="880" height="80" rx="6" fill="#1C1F25" stroke="#3A3E47" stroke-width="1"/>
+    <rect x="80" y="196" width="4" height="80" fill="#2E6A4E"/>
+    <text x="108" y="230" font-size="17" fill="#EFEDE7">unattended</text>
+    <text x="108" y="256" font-size="13" fill="#7C8290">read supplied material, reason, draft, cite, recommend, write private run state</text>
+    <text x="940" y="242" text-anchor="end" font-size="12" fill="#6FBF95">proceeds alone</text>
+
+    <!-- rung 2 -->
+    <rect x="80" y="292" width="880" height="80" rx="6" fill="#1C1F25" stroke="#3A3E47" stroke-width="1"/>
+    <rect x="80" y="292" width="4" height="80" fill="#D0A24E"/>
+    <text x="108" y="326" font-size="17" fill="#EFEDE7">with notice</text>
+    <text x="108" y="352" font-size="13" fill="#7C8290">reversible local writes inside exact approved roots, declared before the spawn</text>
+    <text x="940" y="338" text-anchor="end" font-size="12" fill="#D0A24E">audited</text>
+
+    <!-- rung 3 -->
+    <rect x="80" y="388" width="880" height="80" rx="6" fill="#241C1E" stroke="#8C2432" stroke-width="1.4"/>
+    <rect x="80" y="388" width="4" height="80" fill="#8C2432"/>
+    <text x="108" y="422" font-size="17" fill="#EFEDE7">explicit per action</text>
+    <text x="108" y="448" font-size="13" fill="#B9BDC6">anything external, destructive, financial, or identity touching</text>
+    <text x="940" y="434" text-anchor="end" font-size="12" fill="#D97A84">returns and halts</text>
+  </g>
+
+  <!-- intersection panel -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <line x1="1024" y1="196" x2="1024" y2="468" stroke="#3A3E47" stroke-width="1"/>
+    <text x="1064" y="216" font-size="12" letter-spacing="2" fill="#565C69">EFFECTIVE AUTHORITY IS THE INTERSECTION OF</text>
+
+    <text x="1064" y="258" font-size="13" fill="#7C8290">1</text><text x="1092" y="258" font-size="13" fill="#B9BDC6">outer sandbox</text>
+    <text x="1064" y="290" font-size="13" fill="#7C8290">2</text><text x="1092" y="290" font-size="13" fill="#B9BDC6">controller capability</text>
+    <text x="1064" y="322" font-size="13" fill="#7C8290">3</text><text x="1092" y="322" font-size="13" fill="#B9BDC6">profile ceiling</text>
+    <text x="1064" y="354" font-size="13" fill="#7C8290">4</text><text x="1092" y="354" font-size="13" fill="#B9BDC6">task notice or approval</text>
+    <text x="1064" y="386" font-size="13" fill="#7C8290">5</text><text x="1092" y="386" font-size="13" fill="#B9BDC6">backend tool restrictions</text>
+
+    <line x1="1064" y1="412" x2="1456" y2="412" stroke="#8C2432" stroke-width="1"/>
+    <text x="1064" y="444" font-size="13" fill="#D97A84">the narrowest of these wins, always</text>
+  </g>
+</svg>

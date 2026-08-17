@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" width="1600" height="520" role="img" aria-label="Brain retrieval: a manifest of every note is always loaded, note bodies are loaded selectively, and omission is announced. Always loaded context fell from 58225 tokens to 6789.">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15171B"/>
+      <stop offset="1" stop-color="#0E1013"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="520" fill="url(#bg3)"/>
+
+  <text x="80" y="86" font-family="Georgia, 'Iowan Old Style', serif" font-size="42" fill="#EFEDE7">Retrieval, not dumping</text>
+  <g>
+    <line x1="80" y1="112" x2="520" y2="112" stroke="#8C2432" stroke-width="1"/>
+    <circle cx="300" cy="112" r="3.5" fill="#E0C173"/>
+  </g>
+  <text x="80" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#7C8290">The manifest is always present, so a gap is distinguishable from an omission.</text>
+
+  <!-- before / after bars -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <text x="80" y="210" font-size="12" letter-spacing="2" fill="#565C69">ALWAYS LOADED CONTEXT</text>
+
+    <text x="80" y="252" font-size="13" fill="#7C8290">before</text>
+    <rect x="180" y="234" width="900" height="26" rx="3" fill="#8C2432"/>
+    <text x="1096" y="252" font-size="13" fill="#D97A84">58,225 tokens &#183; 58 files</text>
+
+    <text x="80" y="300" font-size="13" fill="#7C8290">after</text>
+    <rect x="180" y="282" width="105" height="26" rx="3" fill="#2E6A4E"/>
+    <text x="301" y="300" font-size="13" fill="#6FBF95">6,789 tokens &#183; 13 files</text>
+  </g>
+
+  <line x1="80" y1="344" x2="1520" y2="344" stroke="#3A3E47" stroke-width="1"/>
+
+  <!-- three tiers -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <rect x="80" y="376" width="450" height="104" rx="6" fill="#1C1F25" stroke="#3A3E47" stroke-width="1"/>
+    <text x="102" y="406" font-size="12" fill="#E0C173">TIER 0</text>
+    <text x="102" y="432" font-size="16" fill="#EFEDE7">manifest of every note</text>
+    <text x="102" y="456" font-size="12" fill="#7C8290">path, title, domain, confidence, one line</text>
+    <text x="102" y="472" font-size="12" fill="#7C8290">cheap in tokens, complete in coverage</text>
+
+    <rect x="556" y="376" width="450" height="104" rx="6" fill="#1C1F25" stroke="#3A3E47" stroke-width="1"/>
+    <text x="578" y="406" font-size="12" fill="#E0C173">TIER 1</text>
+    <text x="578" y="432" font-size="16" fill="#EFEDE7">hubs, conventions, gaps</text>
+    <text x="578" y="456" font-size="12" fill="#7C8290">always loaded, including what we know</text>
+    <text x="578" y="472" font-size="12" fill="#7C8290">we do not know</text>
+
+    <rect x="1032" y="376" width="488" height="104" rx="6" fill="#241C1E" stroke="#8C2432" stroke-width="1.4"/>
+    <text x="1054" y="406" font-size="12" fill="#E0C173">TIER 2</text>
+    <text x="1054" y="432" font-size="16" fill="#EFEDE7">note bodies, selectively</text>
+    <text x="1054" y="456" font-size="12" fill="#B9BDC6">scored deterministically, capped, and every</text>
+    <text x="1054" y="472" font-size="12" fill="#B9BDC6">omission is announced in the prompt</text>
+  </g>
+</svg>

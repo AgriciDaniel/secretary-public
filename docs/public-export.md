@@ -47,17 +47,19 @@ with a `YYYY-MM-DD` review date, decision `approved`, the same full hash, and a
 non-pending evidence location exists. A filename, Git commit, older approved
 hash, or file presence is never enough. Pending and unrecorded visuals are
 omitted. Image tags for omitted local assets are replaced only in the projected
-README with an explicit omission notice, while the canonical README and assets
+README with an explicit omission notice, while approved exact-hash visuals
 remain unchanged. The provenance inventory itself stays public so recipients
-can see what was excluded and why.
+can see the approval or exclusion decision.
 
 The exporter scans the resulting bytes for credential patterns, absolute home paths, unexpected binaries, em dashes, private paths, and manifest drift. It records a deterministic file list, mode, and SHA-256 digest in `PUBLIC_EXPORT_MANIFEST.json`. File modes and timestamps are normalized so identical source bytes produce the same projection bytes and metadata.
 
-`references/public-export.json` is a machine-readable omission marker. It also
-records that pending visuals were omitted and that exact-hash owner approval is
-required for inclusion. The strict human-support gate fails when that marker
-says the claim evidence was omitted. This prevents an empty public ledger from
-passing as if every claim had been reviewed.
+`references/public-export.json` is a machine-readable omission marker. It
+records whether any pending visuals were omitted and that exact-hash owner
+approval is required for inclusion. Verification rejects a false no-omission
+claim while the public provenance record still contains a pending visual. The
+strict human-support gate fails when the marker says the claim evidence was
+omitted. This prevents an empty public ledger from passing as if every claim had
+been reviewed.
 
 The public projection preserves the controller, profiles, tests, source ledger, and brain notes. Without private extracts, retrieval supplies no `[RAW]` evidence for the omitted claims. The correct behavior is `no data`, an explicit gap, or a request for rights-cleared evidence.
 

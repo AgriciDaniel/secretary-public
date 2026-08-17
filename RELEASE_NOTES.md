@@ -50,9 +50,8 @@ assistant.
 - Explicit private-canonical and fresh-history-public repository topology. The
   current canonical repository must not be made public because eight private
   corpus files plus two internal review packets also occur in its Git history.
-- Canonical Apache-2.0 licence text, an owner-directed private-retention and
-  public-exclusion record for visual assets, and a verified GitHub
-  public-settings acceptance record.
+- Canonical Apache-2.0 licence text, exact-hash owner approval for all seven
+  visual assets, and a verified GitHub public-settings acceptance record.
 - Printing Press documented as static policy and future integration design,
   not as live catalog discovery, an installed package, or an execution adapter.
 - Source-linked personal installation guidance for Claude Code and Codex, with
@@ -66,13 +65,14 @@ assistant.
 
 ### Verification snapshot, 2026-08-18
 
-This snapshot records the initial public source commit and its private source
-candidate. It is not a versioned release attestation.
+This snapshot records the current visual-restoration source candidate together
+with the initial public-history evidence. It is not a versioned release
+attestation.
 
-- Canonical `npm test`: 189 passed, 0 failed, 0 skipped. Its deterministic
+- Canonical `npm test`: 190 passed, 0 failed, 0 skipped. Its deterministic
   runner discovers only `tests/**/*.test.mjs`, so ignored release projections
   cannot change the result.
-- Fresh temporary public projection: 189 passed, 0 failed, 0 skipped.
+- Fresh temporary public projection: 190 passed, 0 failed, 0 skipped.
 - Generated surfaces: current in the canonical and fresh public trees.
 - Markdown relative links: 112 current-worktree files and 107 fresh public files
   passed.
@@ -88,9 +88,9 @@ candidate. It is not a versioned release attestation.
   omission marker. Its strict support gate failed for the required omission
   reason.
 - Release hygiene: 231 tracked and proposed files passed.
-- `AgriciDaniel/secretary-public` projection: 219 files total, with
-  218 entries in `PUBLIC_EXPORT_MANIFEST.json`.
-- Deterministic public archive: 219 members. Public verification passed
+- `AgriciDaniel/secretary-public` projection: 226 files total, with
+  225 entries in `PUBLIC_EXPORT_MANIFEST.json`.
+- Deterministic public archive: 226 members. Public verification passed
   immediately before archiving.
 - Fresh-history public repository:
   `https://github.com/AgriciDaniel/secretary-public`.
@@ -104,8 +104,8 @@ candidate. It is not a versioned release attestation.
   verified after publication. A deliberate direct push was rejected and left
   public `main` unchanged.
 
-These counts apply to the initial public commit and must be rerun for later
-release candidates.
+These counts apply to the visual-restoration source candidate and must be rerun
+for later release candidates.
 The final manifest and archive digests belong in external release evidence.
 Embedding either digest in this manifest-covered file would change the digest
 being recorded.
@@ -114,9 +114,9 @@ being recorded.
 
 1. The owner reviews and records support status for all eight claim-evidence
    rows.
-2. The owner completes the claim-level public-rights judgment. Visual assets
-   remain in the private canonical repository and are excluded from the public
-   projection unless later exact-hash rights evidence authorizes inclusion.
+2. The owner completes the remaining claim-level public-rights judgment. The
+   seven inventoried visuals have a separate exact-hash owner authorization
+   dated 2026-08-18 and are included in the public projection.
 3. The failed Codex evidence-laundering case is investigated before any new
    authorized live batch. The Claude batch remains unrun.
 
