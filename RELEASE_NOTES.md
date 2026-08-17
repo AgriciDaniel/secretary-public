@@ -88,12 +88,12 @@ attestation.
   omission marker. Its strict support gate failed for the required omission
   reason.
 - Release hygiene: 231 tracked and proposed files passed.
-- `AgriciDaniel/secretary-public` projection: 226 files total, with
+- `AgriciDaniel/secretary` projection: 226 files total, with
   225 entries in `PUBLIC_EXPORT_MANIFEST.json`.
 - Deterministic public archive: 226 members. Public verification passed
   immediately before archiving.
 - Fresh-history public repository:
-  `https://github.com/AgriciDaniel/secretary-public`.
+  `https://github.com/AgriciDaniel/secretary`.
 - Initial public root commit: `439fcc879b78b665132147c8e0de4b750661bef2`.
 - Public CI run `32072571651`: Ubuntu Node 20, Ubuntu Node 24, and macOS Node 24
   all passed on the initial public commit.

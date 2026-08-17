@@ -9,5 +9,5 @@
   "fresh_public_history_required": true,
   "omitted_pending_visual_assets": false,
   "asset_inclusion_requires_exact_hash_owner_approval": true,
-  "public_repository": "AgriciDaniel/secretary-public"
+  "public_repository": "AgriciDaniel/secretary"
 }

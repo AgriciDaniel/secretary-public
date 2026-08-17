@@ -89,17 +89,17 @@
     },
     {
       "path": "README.md",
-      "sha256": "b6a273a1a8c9e756cba5aaabec313755083c0dd8c2f671cfac44c298a5cae272",
+      "sha256": "a860d7bd7bc67be565fec829f08d38ca8d33116982e95ae3670cecd874c0a43b",
       "mode": "0644"
     },
     {
       "path": "RELEASE_NOTES.md",
-      "sha256": "16e178e5ea3e1bfb50375a50148a696d49f46a07572c402f3f33c37f7dfcdc50",
+      "sha256": "c14c852a25ff93f0aabde44f890a3c0644a98e1bd512280acbae3e12a9debb56",
       "mode": "0644"
     },
     {
       "path": "SECURITY.md",
-      "sha256": "e8576e15d295155501f755494509709d61d09c6ede7ebf714df3f0942da65987",
+      "sha256": "1faec43dd41bcda29590988a3bfb3e9c7ba98728b76dedc3eb0d639691869c75",
       "mode": "0644"
     },
     {
@@ -199,7 +199,7 @@
     },
     {
       "path": "docs/github-public-settings.md",
-      "sha256": "b31368d2504c2216d43247452a87dacbf137ec6355297d3cd6131e0d38266973",
+      "sha256": "54628863ac919df5976925f04c0e5625f37aecb1b04e3aa2d0c463411e3ca16d",
       "mode": "0644"
     },
     {
@@ -299,7 +299,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "47bbfaa9c560d7003c6232aacb137194652a1dc2f916bc0e07a53a459902ffea",
+      "sha256": "0905e722937a24fdeac3f17dbda3628fed1e50cef3d36349cb0b7d334aefc777",
       "mode": "0644"
     },
     {
@@ -354,7 +354,7 @@
     },
     {
       "path": "references/public-export.json",
-      "sha256": "11ae28c73dfc6429b1dd3b3346c282e0ff1b9a3f60f6de22253d5e3e9bdb9d6e",
+      "sha256": "26c64ea8592e04e3d72dc759cfda43cb68720e1d61cacebd077f347904be326e",
       "mode": "0644"
     },
     {

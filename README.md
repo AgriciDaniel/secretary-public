@@ -57,7 +57,7 @@ The installed instruction points back to the exact checkout, so keep the
 checkout in place and rerun the installer if you move it.
 
 ```text
-git clone https://github.com/AgriciDaniel/secretary-public.git secretary
+git clone https://github.com/AgriciDaniel/secretary.git secretary
 cd secretary
 npm test
 ```
