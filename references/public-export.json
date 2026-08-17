@@ -7,7 +7,7 @@
   "strict_human_support_available": false,
   "git_history_included": false,
   "fresh_public_history_required": true,
-  "omitted_pending_visual_assets": true,
+  "omitted_pending_visual_assets": false,
   "asset_inclusion_requires_exact_hash_owner_approval": true,
   "public_repository": "AgriciDaniel/secretary-public"
 }

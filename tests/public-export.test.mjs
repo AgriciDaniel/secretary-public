@@ -29,13 +29,20 @@ const CURRENT_REPOSITORY = canonicalPackage.repository.url
 const PUBLIC_REPOSITORY = CURRENT_REPOSITORY.toLowerCase() === 'secretarytest/secretary-public'
   ? 'SecretaryTest/secretary-next'
   : 'SecretaryTest/secretary-public';
-const PENDING_VISUAL_ASSETS = [
+const PUBLIC_VISUAL_ASSETS = [
   'assets/cover-web.jpg',
   'assets/cover.png',
   'assets/diagram-authority.svg',
   'assets/diagram-lifecycle.svg',
   'assets/diagram-retrieval.svg',
   'assets/social-card.png',
+  'assets/trust-boundary.jpg',
+];
+const README_VISUAL_ASSETS = [
+  'assets/cover-web.jpg',
+  'assets/diagram-authority.svg',
+  'assets/diagram-lifecycle.svg',
+  'assets/diagram-retrieval.svg',
   'assets/trust-boundary.jpg',
 ];
 
@@ -67,12 +74,18 @@ test('public export is deterministic and excludes private research bytes', async
     assert.ok((await readFile(path.join(first, governedPublicFile), 'utf8')).length > 0, `${governedPublicFile} was not exported`);
   }
   const publicReadme = await readFile(path.join(first, 'README.md'), 'utf8');
-  for (const relative of PENDING_VISUAL_ASSETS) {
-    assert.equal(await readFile(path.join(first, relative)).catch(() => null), null, `${relative} crossed the pending-rights boundary`);
-    assert.ok(!publicReadme.includes(relative), `${relative} remained referenced by the public README`);
+  for (const relative of PUBLIC_VISUAL_ASSETS) {
+    assert.deepEqual(
+      await readFile(path.join(first, relative)),
+      await readFile(path.join(PROJECT_ROOT, relative)),
+      `${relative} did not retain its approved exact bytes`,
+    );
   }
-  assert.match(publicReadme, /pending visual omitted until exact-hash owner approval/u);
-  assert.match(await readFile(path.join(first, 'PUBLIC_EXPORT_NOTICE.md'), 'utf8'), /Pending visual assets are omitted/u);
+  for (const relative of README_VISUAL_ASSETS) {
+    assert.ok(publicReadme.includes(relative), `${relative} is missing from the public README`);
+  }
+  assert.doesNotMatch(publicReadme, /pending visual omitted until exact-hash owner approval/u);
+  assert.match(await readFile(path.join(first, 'PUBLIC_EXPORT_NOTICE.md'), 'utf8'), /Visual assets are governed/u);
 
   const packageMetadata = JSON.parse(await readFile(path.join(first, 'package.json'), 'utf8'));
   assert.equal(packageMetadata.repository.url, `https://github.com/${PUBLIC_REPOSITORY}.git`);
@@ -84,7 +97,7 @@ test('public export is deterministic and excludes private research bytes', async
     PUBLIC_REPOSITORY,
   );
   const publicMarker = JSON.parse(await readFile(path.join(first, 'references', 'public-export.json'), 'utf8'));
-  assert.equal(publicMarker.omitted_pending_visual_assets, true);
+  assert.equal(publicMarker.omitted_pending_visual_assets, false);
   assert.equal(publicMarker.asset_inclusion_requires_exact_hash_owner_approval, true);
 
   const result = await verifyPublicTree(first);
@@ -141,21 +154,37 @@ test('public README asset rewriting changes only omitted local image tags', () =
   assert.match(rewritten, /https:\/\/example\.com\/badge\.svg/u);
 });
 
-test('public verification rejects restoration or README reference of a pending visual', async (t) => {
+test('public verification rejects a provenance downgrade of a published visual', async (t) => {
   const root = await temporaryRoot(t);
   const output = path.join(root, 'public');
   await exportPublicTree({ sourceRoot: PROJECT_ROOT, output, repository: PUBLIC_REPOSITORY });
-  const relative = 'assets/cover.png';
-  await writeFile(
-    path.join(output, relative),
-    Buffer.from('pending visual negative control\n', 'utf8'),
-  );
-  const readmePath = path.join(output, 'README.md');
-  await writeFile(readmePath, `${await readFile(readmePath, 'utf8')}\n<img src="${relative}" alt="negative control">\n`);
+  const relative = 'assets/cover-web.jpg';
+  const provenancePath = path.join(output, 'assets', 'PROVENANCE.md');
+  const provenance = await readFile(provenancePath, 'utf8');
+  const downgraded = provenance
+    .split('\n')
+    .map((line) => line.startsWith('| `cover-web.jpg` |')
+      ? line.replace('| Owner approved |', '| Pending owner confirmation |')
+      : line)
+    .join('\n');
+  assert.notEqual(downgraded, provenance);
+  await writeFile(provenancePath, downgraded);
 
   const result = await verifyPublicTree(output);
   assert.ok(result.failures.some((failure) => failure.includes(`${relative}: visual asset lacks exact-hash owner-approved provenance`)));
   assert.ok(result.failures.some((failure) => failure.includes(`README.md: references pending visual asset ${relative}`)));
+  assert.ok(result.failures.some((failure) => failure.includes('claims no pending visual omission')));
+});
+
+test('public verification rejects a missing owner-approved visual', async (t) => {
+  const root = await temporaryRoot(t);
+  const output = path.join(root, 'public');
+  await exportPublicTree({ sourceRoot: PROJECT_ROOT, output, repository: PUBLIC_REPOSITORY });
+  const relative = 'assets/trust-boundary.jpg';
+  await rm(path.join(output, relative));
+
+  const result = await verifyPublicTree(output);
+  assert.ok(result.failures.some((failure) => failure.includes(`${relative}: owner-approved visual asset is missing`)));
 });
 
 test('public verification fails closed on added credentials and local paths', async (t) => {

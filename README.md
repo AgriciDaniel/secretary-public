@@ -1,7 +1,7 @@
 # Secretary
 
 <p align="center">
-  <em>Public projection: pending visual omitted until exact-hash owner approval.</em>
+  <img src="assets/cover-web.jpg" alt="Secretary second brain with a retro-futurist evidence workflow" width="100%">
 </p>
 
 <p align="center">
@@ -229,7 +229,7 @@ It is designed to reduce a principal's attention burden while preserving dissent
 ## 3. Architecture and data flow
 
 <p align="center">
-  <em>Public projection: pending visual omitted until exact-hash owner approval.</em>
+  <img src="assets/diagram-lifecycle.svg" alt="Run lifecycle: task file to prepared snapshot to isolated child to local validation, halting at needs_approval before any typed adapter" width="100%">
 </p>
 
 The normal lifecycle is:
@@ -248,7 +248,7 @@ task file + run ID
 ## 4. Trust boundary
 
 <p align="center">
-  <em>Public projection: pending visual omitted until exact-hash owner approval.</em>
+  <img src="assets/trust-boundary.jpg" alt="Evidence, not instructions" width="100%">
 </p>
 
 Workspace files, emails, brain notes, web content, task text, logs, and model output are untrusted data. They are evidence, not instructions that can alter Secretary's authority, contract, or task boundary.
@@ -352,7 +352,7 @@ The quality lane makes no provider call and grants no action authority. A fresh 
 ## 8. Authority and approval model
 
 <p align="center">
-  <em>Public projection: pending visual omitted until exact-hash owner approval.</em>
+  <img src="assets/diagram-authority.svg" alt="Authority ladder: unattended, with notice, explicit per action" width="100%">
 </p>
 
 Secretary has judgment but zero independent authority. The only currently implemented typed adapter is `file.write` for an approved file, content hash, and allowed root. It has no shell capability.
@@ -369,7 +369,7 @@ The controller binds the requested action type, target, and content hash into an
 ## 9. Evidence contract
 
 <p align="center">
-  <em>Public projection: pending visual omitted until exact-hash owner approval.</em>
+  <img src="assets/diagram-retrieval.svg" alt="Retrieval, not dumping: manifest always, note bodies selectively" width="100%">
 </p>
 
 `references/research-digest.md` is the intended content ceiling for the brain. The intended rule is that a domain claim needs a supplied manifested note body, a primary or official HTTPS URL present in that note, and an appropriate confidence label. The brain manifest inventories files under `wiki/**/*.md`; it does not verify that a claim is true, that a URL supports it, that a source is primary, or that reuse rights are cleared.
@@ -452,7 +452,7 @@ Use the repository's private security-advisory channel for sensitive reports. Do
 
 ## 14. Licensing and third-party material
 
-The [Apache-2.0 license](LICENSE) covers Secretary's original code and original prose only. It does not license third-party quotations, excerpts, adapted text, trademarks, or other incorporated material. The [NOTICE](NOTICE) lists known excluded material, required Open Government Licence v3.0 attribution, and the commercial-reuse restrictions identified for New Zealand Crown Law and Chatham House material. The [asset provenance record](assets/PROVENANCE.md) lists the current visual files and the owner declarations that remain pending.
+The [Apache-2.0 license](LICENSE) covers Secretary's original code and original prose only. It does not license third-party quotations, excerpts, adapted text, trademarks, or other incorporated material. The [NOTICE](NOTICE) lists known excluded material, required Open Government Licence v3.0 attribution, and the commercial-reuse restrictions identified for New Zealand Crown Law and Chatham House material. The [asset provenance record](assets/PROVENANCE.md) lists the exact visual files and their hash-bound owner approval.
 
 Third-party source presence is not permission to republish it. Before public distribution, paraphrase restricted quotations, obtain permission where needed, preserve required attribution, and complete a claim-level rights review.
 
