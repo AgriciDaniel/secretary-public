@@ -8,7 +8,7 @@ Secretary is experimental. No version is currently warranted for consequential o
 
 Use the public repository's Security tab and its private vulnerability-reporting
 form for a sensitive report:
-https://github.com/AgriciDaniel/secretary-public/security/advisories/new.
+https://github.com/AgriciDaniel/secretary/security/advisories/new.
 The form was enabled and verified from an unauthenticated view on 2026-08-18.
 If the private form is not visible, do not open a public issue containing
 vulnerability details. Include the affected version or commit, the smallest

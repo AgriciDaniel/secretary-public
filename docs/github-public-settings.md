@@ -4,10 +4,10 @@ Status: public preview controls applied and verified on 2026-08-18. This file
 retains the remaining acceptance checks and records the verified remote state.
 A checked box does not replace a fresh API or signed-out check.
 
-Target: `AgriciDaniel/secretary-public`. The repository was created privately
+Target: `AgriciDaniel/secretary`. The repository was created privately
 from a 219-file allowlisted projection, verified, and then made public with one
-fresh-history root commit. The canonical `AgriciDaniel/secretary` repository
-remains private.
+fresh-history root commit. The canonical `AgriciDaniel/secretary-canonical`
+repository remains private.
 
 The canonical development repository contains private research material and
 must remain private. Create the public repository from a manually inspected,
@@ -17,8 +17,9 @@ remote.
 
 ## Publication topology
 
-- [x] Reconfirm that the approved public target is
-  `AgriciDaniel/secretary-public` and that it is still unoccupied.
+- [x] Confirm that the approved public target is `AgriciDaniel/secretary` and
+  that the private canonical repository has moved to
+  `AgriciDaniel/secretary-canonical` without changing either repository ID.
 - [x] Generate and verify the public projection from the exact accepted
   canonical source state.
 - [x] Confirm the projection contains no `.git` directory and initialize new
@@ -126,7 +127,7 @@ setting](https://docs.github.com/en/repositories/managing-your-repositorys-setti
 - [x] From a non-admin view, confirm the Security tab exposes a private `Report
   a vulnerability` path and that it does not route to a public issue. Confirm
   the exact URL
-  `https://github.com/AgriciDaniel/secretary-public/security/advisories/new`
+  `https://github.com/AgriciDaniel/secretary/security/advisories/new`
   works while signed out or from an account without repository access.
 - [ ] Configure and test maintainer notifications for private reports.
 - [x] Review the Security tab with no unresolved alerts before release. Record
@@ -185,11 +186,11 @@ and [repository security and analysis settings](https://docs.github.com/en/repos
 
 Live evidence recorded on 2026-08-18:
 
-- Public repository: `https://github.com/AgriciDaniel/secretary-public`.
+- Public repository: `https://github.com/AgriciDaniel/secretary`.
 - Initial root commit: `439fcc879b78b665132147c8e0de4b750661bef2`.
 - Initial tree: `dfbfab0d5b6322702f5d658647bfca196584bdc0`.
-- Initial CI run: `https://github.com/AgriciDaniel/secretary-public/actions/runs/32072571651`.
-- CodeQL run: `https://github.com/AgriciDaniel/secretary-public/actions/runs/32072769019`.
+- Initial CI run: `https://github.com/AgriciDaniel/secretary/actions/runs/32072571651`.
+- CodeQL run: `https://github.com/AgriciDaniel/secretary/actions/runs/32072769019`.
 - Active rulesets: `Protect main` with ID `20958036`, and
   `Protect release tags` with ID `20958040`.
 - The `main` ruleset requires pull requests, strict success from the three CI

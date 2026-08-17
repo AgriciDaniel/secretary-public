@@ -28,9 +28,9 @@
     "workflow-automation"
   ],
   "engines": {"node": ">=20"},
-  "repository": {"type": "git", "url": "https://github.com/AgriciDaniel/secretary-public.git"},
-  "homepage": "https://github.com/AgriciDaniel/secretary-public#readme",
-  "bugs": {"url": "https://github.com/AgriciDaniel/secretary-public/issues"},
+  "repository": {"type": "git", "url": "https://github.com/AgriciDaniel/secretary.git"},
+  "homepage": "https://github.com/AgriciDaniel/secretary#readme",
+  "bugs": {"url": "https://github.com/AgriciDaniel/secretary/issues"},
   "scripts": {
     "generate": "node scripts/generate-surfaces.mjs && node scripts/generate-brain-manifest.mjs && node scripts/generate-source-ledger.mjs",
     "check:generated": "node scripts/check-generated.mjs",
