@@ -1,0 +1,44 @@
+name: Research or citation correction
+description: Correct a source, claim, taxonomy, qualification, or rights boundary.
+title: "[Research]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Affected path or claim ID
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current statement
+      description: Quote only the minimum repository text needed to identify the issue.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary or official source URL
+    validations:
+      required: true
+  - type: textarea
+    id: locator
+    attributes:
+      label: Exact locator and correction
+      description: Provide page, section, table, paragraph, or record location plus the proposed narrow correction.
+    validations:
+      required: true
+  - type: dropdown
+    id: correction_type
+    attributes:
+      label: Correction type
+      options:
+        - Claim support
+        - Qualification or limitation
+        - Source type
+        - Institutional authority
+        - Rights or attribution
+        - Broken or stale source
+    validations:
+      required: true

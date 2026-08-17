@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/source-ledger.json",
+  "title": "Secretary source ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "generated", "sources"],
+  "properties": {
+    "version": {"type": "integer", "minimum": 1},
+    "generated": {"type": "string", "format": "date"},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "url", "source_type", "retrieved", "refresh_due", "confidence", "claims", "binding_authority"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "title": {"type": "string", "minLength": 1},
+          "url": {"type": "string", "pattern": "^https://"},
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "primary_record",
+              "archival_reproduction",
+              "official_publication",
+              "regulation_or_rule",
+              "standards_body",
+              "peer_reviewed",
+              "preprint",
+              "textbook",
+              "practitioner_publication",
+              "vendor_documentation",
+              "news_or_magazine",
+              "encyclopedia",
+              "local_synthesis",
+              "cited_but_unlinked"
+            ]
+          },
+          "retrieved": {"type": "string", "format": "date"},
+          "refresh_due": {"type": "string", "format": "date"},
+          "confidence": {"type": "string", "minLength": 1},
+          "claims": {
+            "type": "array",
+            "items": {"type": "string", "minLength": 1}
+          },
+          "binding_authority": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

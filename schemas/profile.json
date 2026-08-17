@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/profile.json",
+  "title": "Secretary profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "description", "backend", "model", "allowed_tools", "system_guidance", "max_task_bytes", "max_evidence_file_bytes", "max_evidence_total_bytes", "max_evidence_files", "brain", "action_types"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$"},
+    "name": {"type": "string", "minLength": 1, "maxLength": 100},
+    "description": {"type": "string", "minLength": 1, "maxLength": 500},
+    "backend": {"type": "string", "enum": ["claude", "codex"]},
+    "model": {"type": "string", "minLength": 1, "maxLength": 100},
+    "allowed_tools": {"type": "array", "maxItems": 0, "items": {"type": "string", "enum": ["Read", "Glob", "Grep"]}, "uniqueItems": true},
+    "system_guidance": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "max_task_bytes": {"type": "integer", "minimum": 1, "maximum": 1048576},
+    "max_evidence_file_bytes": {"type": "integer", "minimum": 1, "maximum": 1048576},
+    "max_evidence_total_bytes": {"type": "integer", "minimum": 1, "maximum": 4194304},
+    "max_evidence_files": {"type": "integer", "minimum": 1, "maximum": 1000},
+    "brain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["root", "retrieval", "required_citation_mode"],
+      "properties": {
+        "root": {"type": "string", "minLength": 1, "maxLength": 1024},
+        "retrieval": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["always_load", "max_note_tokens", "max_notes", "manifest_path", "profile_domains"],
+          "properties": {
+            "always_load": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 100,
+              "items": {"type": "string", "minLength": 1, "maxLength": 1024},
+              "uniqueItems": true
+            },
+            "max_note_tokens": {"type": "integer", "minimum": 1, "maximum": 65536},
+            "max_notes": {"type": "integer", "minimum": 1, "maximum": 100},
+            "manifest_path": {"type": "string", "minLength": 1, "maxLength": 1024},
+            "profile_domains": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 20,
+              "items": {"type": "string", "pattern": "^[a-z][a-z0-9-]*$"},
+              "uniqueItems": true
+            }
+          }
+        },
+        "required_citation_mode": {"type": "string", "enum": ["brain_note_and_primary_url"]}
+      }
+    },
+    "action_types": {"type": "array", "maxItems": 20, "items": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"}, "uniqueItems": true}
+  }
+}

@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"thread-2"}
+{"type":"turn.started"}
+{"type":"error","message":"Reconnecting after a transient transport error"}
+{"type":"item.completed","item":{"id":"item-2","type":"agent_message","text":"{\"run_id\":\"run-0001\"}"}}
+{"type":"turn.completed","usage":{"input_tokens":10,"output_tokens":5}}

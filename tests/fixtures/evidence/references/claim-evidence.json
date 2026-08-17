@@ -1,0 +1,25 @@
+[
+  {
+    "claim_id": "synthetic-claim",
+    "note_path": "wiki/synthetic-note.md",
+    "source_id": "synthetic-source",
+    "locator": {
+      "exact": "Cafe\u0301 leaders choose a short passage",
+      "prefix": "",
+      "suffix": " for a claim."
+    },
+    "extract_sha256": "767344c5f3453d3ecb355fd38fbb2a9cbae1bfcd7eead60e76fc26c8f2cd682c",
+    "locator_verification": {
+      "method": "raw_bytes_exact_match",
+      "actor_type": "tool",
+      "verified_by": "Fixture locator checker",
+      "verified_at": "2026-08-16T10:30:00+03:00"
+    },
+    "support_attestation": {
+      "status": "supports",
+      "attester_type": "human",
+      "attested_by": "Fixture Reviewer",
+      "attested_at": "2026-08-16T10:35:00+03:00"
+    }
+  }
+]

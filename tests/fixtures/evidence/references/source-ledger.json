@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "generated": "2026-08-16",
+  "sources": [
+    {
+      "id": "synthetic-source",
+      "title": "Synthetic source",
+      "url": "https://example.test/source",
+      "source_type": "synthetic fixture",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "synthetic",
+      "claims": ["A synthetic claim"],
+      "binding_authority": "none"
+    },
+    {
+      "id": "bare-source",
+      "title": "Bare domain fixture",
+      "url": "https://bare.example.test",
+      "source_type": "synthetic fixture",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "synthetic",
+      "claims": ["No claim evidence"],
+      "binding_authority": "none"
+    }
+  ]
+}

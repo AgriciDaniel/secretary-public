@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "generated": "2026-08-17",
+  "sources": [
+    {
+      "id": "missing-source-type",
+      "title": "Missing source type",
+      "url": "https://example.test/missing",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "contested",
+      "claims": ["Fixture claim"],
+      "binding_authority": "not established"
+    }
+  ]
+}

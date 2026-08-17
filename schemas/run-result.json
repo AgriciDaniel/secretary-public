@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/run-result.json",
+  "title": "Secretary run result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "status", "recommendation", "outbound_document", "dissent", "escalations", "sources", "authority", "verification", "quality_control", "evidence", "approval_request"],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{7,127}$"},
+    "status": {"type": "string", "enum": ["completed", "needs_approval"]},
+    "recommendation": {"type": "string"},
+    "outbound_document": {"type": "string"},
+    "dissent": {"type": "array", "items": {"type": "string"}},
+    "escalations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["decision", "reason", "ccir_candidate"],
+        "properties": {
+          "decision": {"type": "string", "minLength": 1},
+          "reason": {"type": "string", "minLength": 1},
+          "ccir_candidate": {"type": "boolean"}
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "claim_id", "vault_note", "url", "confidence", "provenance", "evidence_path", "support_attestation"],
+        "properties": {
+          "claim": {"type": "string", "minLength": 1},
+          "claim_id": {"type": ["string", "null"]},
+          "vault_note": {"type": "string", "pattern": "^wiki/[^\\r\\n\\\\]+\\.md$"},
+          "url": {"type": "string", "pattern": "^https://"},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+          "provenance": {"type": "string", "enum": ["[RAW]", "[FETCH]", "[SEARCH]", "[INFER]"]},
+          "evidence_path": {"type": ["string", "null"]},
+          "support_attestation": {"type": "string", "enum": ["human_supports", "human_partial", "human_insufficient", "machine_presence_only", "not_supplied"]}
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requested", "effective", "approvals_used"],
+      "properties": {
+        "requested": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "effective": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+        "approvals_used": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "verification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["performed", "not_performed", "unverified_claims", "contradictions", "observed_injection_attempts"],
+      "properties": {
+        "performed": {"type": "array", "items": {"type": "string"}},
+        "not_performed": {"type": "array", "items": {"type": "string"}},
+        "unverified_claims": {"type": "array", "items": {"type": "string"}},
+        "contradictions": {"type": "array", "items": {"type": "string"}},
+        "observed_injection_attempts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["source", "summary"],
+            "properties": {
+              "source": {"type": "string", "minLength": 1},
+              "summary": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "quality_control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fit", "acceptance_criteria", "outcome", "stop_reason", "review"],
+      "properties": {
+        "fit": {"type": "string", "enum": ["fit", "not_fit", "needs_input"]},
+        "acceptance_criteria": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "outcome": {"type": "string", "enum": ["passed", "improved_not_passed", "inconclusive", "blocked", "budget_stopped", "needs_human_decision"]},
+        "stop_reason": {"type": "string", "enum": ["acceptance_met", "authority_boundary", "missing_evidence", "contradiction", "budget_reached", "plateau", "regression", "unsafe_input", "needs_human_judgment"]},
+        "review": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required", "performed", "independent", "reviewer", "limitations"],
+          "properties": {
+            "required": {"type": "boolean"},
+            "performed": {"type": "boolean"},
+            "independent": {"type": "boolean"},
+            "reviewer": {"type": "string", "enum": ["none", "same_context", "fresh_context", "human"]},
+            "limitations": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["manifest_sha256", "truncated", "included_files", "included_bytes", "omissions"],
+      "properties": {
+        "manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "truncated": {"type": "boolean"},
+        "included_files": {"type": "integer", "minimum": 0},
+        "included_bytes": {"type": "integer", "minimum": 0},
+        "omissions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "reason", "included_bytes", "omitted_bytes"],
+            "properties": {
+              "path": {"type": "string", "minLength": 1},
+              "reason": {"type": "string", "enum": ["binary_file", "file_count_cap", "per_file_byte_cap", "special_file", "symlink_not_followed", "total_byte_cap"]},
+              "included_bytes": {"type": "integer", "minimum": 0},
+              "omitted_bytes": {"type": "integer", "minimum": 0}
+            }
+          }
+        }
+      }
+    },
+    "approval_request": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["approval_id", "action_type", "action", "action_sha256", "reason"],
+      "properties": {
+        "approval_id": {"type": "string", "pattern": "^[A-Za-z0-9._-]{8,128}$"},
+        "action_type": {"type": "string", "enum": ["file.write"]},
+        "action": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["target", "content_sha256"],
+          "properties": {
+            "target": {"type": "string", "minLength": 1},
+            "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+          }
+        },
+        "action_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "needs_approval"}}, "required": ["status"]},
+      "then": {
+        "required": ["approval_request"],
+        "properties": {"approval_request": {"type": "object"}}
+      }
+    }
+  ]
+}

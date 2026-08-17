@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "generated": "2026-08-16",
+  "sources": [
+    {
+      "id": "ceo-time-hbr",
+      "title": "How CEOs Manage Time",
+      "url": "https://hbr.org",
+      "source_type": "news_or_magazine",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "contested",
+      "claims": [
+        "CEO time-use sample and reported distributions"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "ceo-time-mgma",
+      "title": "MGMA reproduction of CEO time-use figures",
+      "url": "https://www.mgma.com",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Triangulation of paywalled CEO time-use figures"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "ceo-time-forbes",
+      "title": "Forbes reproduction of CEO time-use figures",
+      "url": "https://www.forbes.com",
+      "source_type": "news_or_magazine",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Triangulation of paywalled CEO time-use figures"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "cabinet-correspondence-guide",
+      "title": "Guide to Handling Correspondence",
+      "url": "https://www.gov.uk/government/publications/handling-government-correspondence-guidance",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Correspondence tiers, clocks, holding replies, transfers, and decline controls"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "cabinet-correspondence-performance-2024",
+      "title": "Government correspondence performance data 2024",
+      "url": "https://www.gov.uk",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Annual correspondence performance context"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "cabinet-correspondence-performance-2025",
+      "title": "Government correspondence performance data 2025",
+      "url": "https://www.gov.uk",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "181927 items received and 71 percent on time"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "iaap-cap-bok",
+      "title": "CAP Body of Knowledge",
+      "url": "https://www.iaap-hq.org/page/certification_older",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Six weighted duty domains and 46 percent communication plus writing"
+      ],
+      "binding_authority": "governs the IAAP CAP certification blueprint, not administrative work generally and not Secretary"
+    },
+    {
+      "id": "uk-red-box",
+      "title": "UK ministerial red box contents",
+      "url": "https://www.gov.uk",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Example overnight paper flow and immediate folder"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "white-house-book",
+      "title": "White House Book preparation",
+      "url": "https://whitehousetransitionproject.org",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Daily, three-week, and three-month calendar horizons"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "bezos-2015-letter",
+      "title": "Amazon 2015 Letter to Shareholders",
+      "url": "https://www.sec.gov/edgar",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "practitioner",
+      "claims": [
+        "One-way and two-way door distinction"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "bezos-2016-letter",
+      "title": "Amazon 2016 Letter to Shareholders",
+      "url": "https://www.sec.gov/edgar",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "practitioner",
+      "claims": [
+        "Seventy percent information rule"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "eisenhower-1954",
+      "title": "Address at the Second Assembly of the World Council of Churches",
+      "url": "https://www.presidency.ucsb.edu/documents/address-the-second-assembly-the-world-council-churches-evanston-illinois",
+      "source_type": "archival_reproduction",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Binary urgent and important distinction attributed to an unnamed college president"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "covey-matrix",
+      "title": "Covey urgency-importance matrix",
+      "url": "https://www.franklincovey.com",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "folklore",
+      "claims": [
+        "1989 matrix provenance"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "hummel-urgent",
+      "title": "Tyranny of the Urgent",
+      "url": "https://www.ivpress.com",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "folklore",
+      "claims": [
+        "Independent 1967 appearance of the urgency idea"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "mere-urgency-effect",
+      "title": "The Mere Urgency Effect",
+      "url": "https://academic.oup.com/jcr",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Artificial urgency can displace objectively superior payoff"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "management-3-delegation",
+      "title": "Management 3.0 seven delegation levels",
+      "url": "https://management30.com/empower-teams/delegation-empowerment/",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "practitioner",
+      "claims": [
+        "Tell, Sell, Consult, Agree, Advise, Inquire, Delegate"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "esi-handbook",
+      "title": "Emergency Severity Index, fifth edition",
+      "url": "https://www.ena.org/news-publications/newsroom/ena-updates-emergency-severity-index-resources-improve-patient-triage",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Levels 3 to 5 use anticipated resource count"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "manchester-triage-method",
+      "title": "Manchester Triage System",
+      "url": "https://www.triagenet.net",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Ordered discriminators, first match, and maximum assessment times"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "manchester-validity",
+      "title": "Validity of the Manchester Triage System in emergency care",
+      "url": "https://journals.plos.org",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Adult sensitivity range of 0.47 to 0.87 across hospitals"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "planning-fallacy",
+      "title": "Kahneman and Tversky planning fallacy research",
+      "url": "https://www.sciencedirect.com",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Reference-class forecasting foundation"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "treasury-optimism-bias",
+      "title": "HM Treasury optimism bias supplementary guidance",
+      "url": "https://www.gov.uk/government/publications/green-book-supplementary-guidance-optimism-bias",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Mandatory numeric uplifts for named project classes"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "simon-satisficing",
+      "title": "Simon satisficing research, 1955 and 1956",
+      "url": "https://academic.oup.com/qje/article-abstract/69/1/99/1919737",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Stop search when an option meets a preset aspiration level"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "simon-nobel",
+      "title": "Herbert A. Simon Nobel Prize record",
+      "url": "https://www.nobelprize.org",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "1978 Nobel record"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "schwartz-maximizing",
+      "title": "Maximizing versus satisficing",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12416921/",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Maximizers reported lower satisfaction and more regret"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "itil-escalation",
+      "title": "ITIL escalation distinction",
+      "url": "https://www.itil.com",
+      "source_type": "cited_but_unlinked",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "contested",
+      "claims": [
+        "Functional and hierarchical escalation are independent"
+      ],
+      "binding_authority": "not established"
+    },
+    {
+      "id": "pace-structure",
+      "title": "PACE graded assertiveness structure",
+      "url": "https://www.safetyandquality.gov.au/sites/default/files/2024-04/emergency_triage_education_kit_-_second_edition.pdf",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "contested",
+      "claims": [
+        "Probe, Alert, Challenge, Emergency or Escalate"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "ahrq-teamstepps",
+      "title": "TeamSTEPPS Two-Challenge Rule",
+      "url": "https://www.ahrq.gov/teamstepps-program/index.html",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Two challenges and CUS trigger language"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "news2",
+      "title": "National Early Warning Score 2",
+      "url": "https://www.rcp.ac.uk",
+      "source_type": "standards_body",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Aggregate score and single-parameter override"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "ipass-study",
+      "title": "Changes in Medical Errors after Implementation of a Handoff Program",
+      "url": "https://www.nejm.org",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "I-PASS structure and reported reductions in errors and preventable adverse events"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "sbar-review",
+      "title": "Impact of the SBAR communication tool on patient safety",
+      "url": "https://bmjopen.bmj.com/content/8/8/e022202",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Low-to-moderate certainty for SBAR hard outcomes"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "adp-5-0",
+      "title": "ADP 5-0 The Operations Process",
+      "url": "https://armypubs.army.mil",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "CCIR definition, branches, and sequels"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "adp-6-0",
+      "title": "ADP 6-0 Command and Control",
+      "url": "https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1033415",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "CCIR tied to decisions and selected by the commander; title reissued as Command and Control on 2026-07-07"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "fm-6-0",
+      "title": "FM 6-0 Commander and Staff Organization and Operations",
+      "url": "https://armypubs.army.mil",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "CCIR characteristics, PIR, FFIR, and EEFI"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "restatement-agency",
+      "title": "Restatement Third of Agency",
+      "url": "https://www.ali.org/publications/restatement-law-third/agency",
+      "source_type": "textbook",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Agency definition, actual authority, apparent authority, and ratification concepts summarized in the digest"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "nala-code",
+      "title": "NALA Code of Ethics and Professional Responsibility",
+      "url": "https://nala.org/certification/certification_old/nala-code-ethics-and-professional-responsibility/",
+      "source_type": "regulation_or_rule",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Canons 1, 4, 5, and 7"
+      ],
+      "binding_authority": "binding on NALA members and Certified Paralegals through NALA membership and certification enforcement, not law and not a Secretary mandate"
+    },
+    {
+      "id": "nc-rule-1-6",
+      "title": "North Carolina Rule of Professional Conduct 1.6",
+      "url": "https://www.ncbar.gov",
+      "source_type": "regulation_or_rule",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Confidentiality default and reasonable safeguards"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "aba-rule-5-3",
+      "title": "ABA Model Rule 5.3",
+      "url": "https://www.americanbar.org",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Professional responsibility for nonlawyer assistant conduct"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "chatham-house-rule",
+      "title": "Chatham House Rule",
+      "url": "https://www.chathamhouse.org/about-us/chatham-house-rule",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Information may be used while identity and affiliation may not be revealed"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "civil-service-code",
+      "title": "Civil Service Code",
+      "url": "https://www.gov.uk/government/publications/civil-service-code/the-civil-service-code",
+      "source_type": "regulation_or_rule",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Integrity, honesty, objectivity, impartiality, and continuing non-disclosure"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "ar-25-50",
+      "title": "AR 25-50 Preparing and Managing Correspondence",
+      "url": "https://armypubs.army.mil",
+      "source_type": "regulation_or_rule",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "BLUF, active voice, sentence, paragraph, and page constraints"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "da-pam-600-67",
+      "title": "DA Pam 600-67 Effective Writing for Army Leaders",
+      "url": "https://armypubs.army.mil",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Clarity index formula and target"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "dwp-submission-template",
+      "title": "DWP ministerial submission template, FOI 248/2011",
+      "url": "https://www.gov.uk",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Issue, Recommendation, Timing, Discussion, Do Nothing, and length limits"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "dhs-decision-memo",
+      "title": "DHS Action and Decision Memo template",
+      "url": "https://www.dhs.gov",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Approve, Disapprove, Modify, Needs discussion decision block"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "completed-staff-work",
+      "title": "Completed Staff Work text",
+      "url": "https://en.wikipedia.org/wiki/Completed_staff_work",
+      "source_type": "encyclopedia",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "contested",
+      "claims": [
+        "Answers rather than questions, outbound artefact, and signature test"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "bovee-thill-negative-messages",
+      "title": "Bovee and Thill negative-message pattern",
+      "url": "https://www.pearson.com",
+      "source_type": "textbook",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Buffered pattern for some negative messages"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "umn-negative-messages",
+      "title": "University of Minnesota open business communication text",
+      "url": "https://open.lib.umn.edu",
+      "source_type": "textbook",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Indirect pattern for negative messages"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "ashman-negative-messages",
+      "title": "Ashman business communication text",
+      "url": "https://www.ashman.com",
+      "source_type": "textbook",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Buffered pattern for negative messages"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "plain-language-bad-news",
+      "title": "Plain Language guidance on bad news",
+      "url": "https://www.plainlanguage.gov",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Do not bury the main message"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "civilservant-submissions",
+      "title": "Civil service guidance on submissions and dissent",
+      "url": "https://www.civilservant.org.uk",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Do not bury upward bad news and bound dissent after written and oral rounds"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "crown-law-no-surprises",
+      "title": "Chief Executives and the No Surprises Principle",
+      "url": "https://www.crownlaw.govt.nz",
+      "source_type": "cited_but_unlinked",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "contested",
+      "claims": [
+        "Notification scope, legal boundary, significance, and receipt conditions"
+      ],
+      "binding_authority": "not established"
+    },
+    {
+      "id": "frc-code",
+      "title": "UK Corporate Governance Code",
+      "url": "https://www.frc.org.uk",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "No-surprises principle absent from this code"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "janis-groupthink",
+      "title": "Janis groupthink symptom taxonomy",
+      "url": "https://en.wikipedia.org/wiki/Groupthink",
+      "source_type": "encyclopedia",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "contested",
+      "claims": [
+        "Mindguards, self-censorship, and illusion of unanimity"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "nasa-caib",
+      "title": "Columbia Accident Investigation Board Report, Volume I",
+      "url": "https://www.nasa.gov",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Briefing compression, passive safety channels, and dissent loss"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "ifg-private-office",
+      "title": "Strengthening private office",
+      "url": "https://www.instituteforgovernment.org.uk",
+      "source_type": "practitioner_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Over-gatekeeping, sycophancy, diary capture, post-box mode, and sequencing constraint"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "rwanda-direction",
+      "title": "Rwanda ministerial direction letter",
+      "url": "https://www.gov.uk",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Scoped dissent followed by commitment to implement"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "butler-review",
+      "title": "Butler Review, HC 898",
+      "url": "https://www.gov.uk",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2027-08-16",
+      "confidence": "institutional",
+      "claims": [
+        "Contrast between unusual and day-to-day dissent"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "anthropic-sycophancy",
+      "title": "Towards Understanding Sycophancy in Language Models",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/0105f7972202c1d4fb817da9f21a9663-Abstract-Conference.html",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Correct-answer reversal rates after user pushback"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "syceval",
+      "title": "SycEval",
+      "url": "https://ojs.aaai.org/index.php/AIES/article/view/36598",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "58.19 percent overall sycophancy result"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "test-of-time",
+      "title": "Test of Time",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/eb7295a8bc613b375726659c2ecd6f14-Abstract-Conference.html",
+      "source_type": "peer_reviewed",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "evidence-based",
+      "claims": [
+        "Duration arithmetic, timeline ordering, and timezone conversion scores"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "claude-4-system-card",
+      "title": "Claude 4 system card",
+      "url": "https://www.anthropic.com",
+      "source_type": "vendor_documentation",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Autonomy cues can trigger autonomous third-party contact"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "microsoft-meeting-trim",
+      "title": "Microsoft shortened-event defaults",
+      "url": "https://www.microsoft.com",
+      "source_type": "vendor_documentation",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Five-minute short-event and ten-minute long-event reduction defaults"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "google-speedy-meetings",
+      "title": "Google meeting trim documentation",
+      "url": "https://www.google.com",
+      "source_type": "vendor_documentation",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [
+        "Five or ten minute trim without the 25 and 50 minute attribution"
+      ],
+      "binding_authority": "not binding"
+    },
+    {
+      "id": "start-triage",
+      "title": "START triage reference",
+      "url": "https://chemm.hhs.gov",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "ministerial-code",
+      "title": "UK Ministerial Code",
+      "url": "https://www.gov.uk",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "public-service-nz",
+      "title": "New Zealand Public Service guidance",
+      "url": "https://www.publicservice.govt.nz",
+      "source_type": "official_publication",
+      "retrieved": "2026-08-16",
+      "refresh_due": "2026-11-16",
+      "confidence": "institutional",
+      "claims": [],
+      "binding_authority": "source-specific, not a Secretary mandate"
+    },
+    {
+      "id": "eyal-perspective-taking",
+      "title": "Perspective mistaking: Accurately understanding the mind of another requires getting perspective, not taking perspective",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29620401/",
+      "source_type": "peer_reviewed",
+      "claims": [
+        "Perspective taking did not consistently increase interpersonal accuracy",
+        "Getting another perspective directly through conversation increased accuracy"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based"
+    },
+    {
+      "id": "sherf-voice-silence",
+      "title": "Distinguishing Voice and Silence at Work: Unique Relationships with Perceived Impact, Psychological Safety, and Burnout",
+      "url": "https://doi.org/10.5465/amj.2018.1428",
+      "source_type": "peer_reviewed",
+      "claims": [
+        "Voice and silence are independent constructs",
+        "Psychological safety relates more strongly to silence, perceived impact more strongly to voice"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based"
+    },
+    {
+      "id": "joseph-mixed-ei",
+      "title": "Why does self-reported emotional intelligence predict job performance? A meta-analytic investigation of mixed EI",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25243996/",
+      "source_type": "peer_reviewed",
+      "claims": [
+        "Mixed emotional intelligence does not predict job performance once cognitive ability and personality are controlled"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based"
+    },
+    {
+      "id": "faa-ac-120-90-tem",
+      "title": "FAA Advisory Circular 120-90, Line Operations Safety Audits",
+      "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_120-90.pdf",
+      "source_type": "official_publication",
+      "claims": [
+        "Threat, error, and undesired state definitions",
+        "TEM is not a replacement for CRM"
+      ],
+      "binding_authority": "not binding on the public unless incorporated by reference; not a Secretary mandate",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based"
+    },
+    {
+      "id": "tannenbaum-debrief",
+      "title": "Do team and individual debriefs enhance performance? A meta-analysis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23516804/",
+      "source_type": "peer_reviewed",
+      "claims": [
+        "Debriefs improve effectiveness over a control group by approximately 25 percent"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based"
+    },
+    {
+      "id": "neily-team-training",
+      "title": "Association between implementation of a medical team training program and surgical mortality",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20959579/",
+      "source_type": "peer_reviewed",
+      "claims": [
+        "18 percent reduction in annual mortality in trained facilities"
+      ],
+      "binding_authority": "source-specific, not a Secretary mandate",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based"
+    },
+    {
+      "id": "printing-press-generator",
+      "title": "CLI Printing Press",
+      "url": "https://github.com/mvanhorn/cli-printing-press",
+      "source_type": "vendor_documentation",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2026-09-17",
+      "confidence": "practitioner",
+      "claims": [
+        "Project-described generator capabilities, prerequisites, install paths, and browser traffic capture mode"
+      ],
+      "binding_authority": "project documentation only, not provider permission or a Secretary mandate"
+    },
+    {
+      "id": "printing-press-library",
+      "title": "Printing Press Library",
+      "url": "https://github.com/mvanhorn/printing-press-library",
+      "source_type": "vendor_documentation",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2026-09-17",
+      "confidence": "practitioner",
+      "claims": [
+        "Official catalog discovery and install workflow",
+        "Dated catalog snapshot of 410 CLIs across 22 categories"
+      ],
+      "binding_authority": "project documentation only, not provider permission or a Secretary mandate"
+    },
+    {
+      "id": "printing-press-catalog",
+      "title": "Printing Press catalog website",
+      "url": "https://printingpress.dev/",
+      "source_type": "vendor_documentation",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2026-09-17",
+      "confidence": "practitioner",
+      "claims": [
+        "Official web catalog provides tool and category browsing"
+      ],
+      "binding_authority": "project catalog only, not provider permission or a Secretary mandate"
+    }
+  ]
+}

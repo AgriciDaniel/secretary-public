@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible Secretary defect without private data.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include credentials, private prompts, client data, or sensitive vulnerabilities. Use SECURITY.md for security reports.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Provide the exact version or commit if known.
+    validations:
+      required: true
+  - type: dropdown
+    id: backend
+    attributes:
+      label: Backend
+      options:
+        - No model backend involved
+        - Claude Code
+        - Codex
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal safe reproduction
+      description: List exact commands and sanitized inputs.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include sanitized output and exit status.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Node.js version, and relevant CLI version.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed credentials, private data, personal paths, and sensitive exploit details.
+          required: true

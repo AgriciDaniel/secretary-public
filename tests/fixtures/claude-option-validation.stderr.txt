@@ -1,0 +1,1 @@
+Error: --json-schema is not valid JSON: JSON Parse error: Unexpected identifier "not"

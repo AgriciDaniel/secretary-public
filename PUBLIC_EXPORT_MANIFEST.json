@@ -1,0 +1,1096 @@
+{
+  "version": 1,
+  "projection": "rights-reduced-public-source",
+  "files": [
+    {
+      "path": ".github/CODEOWNERS",
+      "sha256": "b999efc78e39438ec85bb48d2cc4bf4a95da3dcd94ecd0a4afd493e88c4a4ba1",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug-report.yml",
+      "sha256": "6ccfa9568563300daf0ded10bda68a650a1eff0261308d61813fc70454656dfa",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "sha256": "3c961691250e2192c324690d714d6efec60aef4fdeecf2e84cd97e1bab81b12a",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature-request.yml",
+      "sha256": "015e7fa054ce3ca8e7b85dedb8bb56d25ce3f3a0a2f0098bedc7651806c9464f",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/research-correction.yml",
+      "sha256": "8f9d923230ec105a8a048994b6ed107413aea8d9bfc3572200f884d3b9a3a2a6",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "01e0a53243bf4fabfd57fed237d586d3e4f713bc0647fae66abc260901bc7a44",
+      "mode": "0644"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "a99ebc99935551c3b45c45e8ed1f1ba9ebd17b0ecfa2259bf1e35a7d7ef538e3",
+      "mode": "0644"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "62e163508a5959ffe42973aa6324243a58f8f7781cb17281f79313831c73821a",
+      "mode": "0644"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "f0750358b5b6a1e9aded849e14c2669b6ba66dcfa577ce097801186e853e5b3a",
+      "mode": "0644"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "b12ed57b164e1a37b376cb712492609f69b0e845eb121f3f7eaecc2f174a34a7",
+      "mode": "0644"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "7920c156228fe25e6104396597e072ec70467df07e39c2ab7779b7e628186fc2",
+      "mode": "0644"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "sha256": "137cee2cb5749aa58fb1d7dd1a73e473e455b169af3513e4531cbef9510fb22d",
+      "mode": "0644"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "69c991e12a7bc6acc317f326ef8ed62eaf6c7352ff27de871c3e01f66311e709",
+      "mode": "0644"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "f0750358b5b6a1e9aded849e14c2669b6ba66dcfa577ce097801186e853e5b3a",
+      "mode": "0644"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "mode": "0644"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "1a9b906bb0b1176c90b79153be3f70ab2bdda59e665f5a35b98c4bad459bdb13",
+      "mode": "0644"
+    },
+    {
+      "path": "PUBLIC_EXPORT_NOTICE.md",
+      "sha256": "a7c4d603390030393880b9a0283aad4ea25b9e13ca094068631f98a04b02b786",
+      "mode": "0644"
+    },
+    {
+      "path": "README.md",
+      "sha256": "f6d1e21a3bdda57b7289cd27381b4135ff9915c31b90f13dafe3f7b4e7dbb007",
+      "mode": "0644"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "sha256": "67882b42f17ccae9785f92ab05a12d8836e1185bf261eb290ff7ce9f8607fe0b",
+      "mode": "0644"
+    },
+    {
+      "path": "SECURITY.md",
+      "sha256": "6d1352688eb7072115c142fc608263788fb8bbafd0db4bd7b88e006ec95227ad",
+      "mode": "0644"
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "c1d95bfe4278acd77c34777bb74e45181b3f33139d49f7c3867afdd2763d7e9d",
+      "mode": "0644"
+    },
+    {
+      "path": "SUPPORT.md",
+      "sha256": "832fc14f3668abd64b6a67e5355ef022cc24859a3ce65d438fa05ed16e26ebc9",
+      "mode": "0644"
+    },
+    {
+      "path": "agents/secretary.md",
+      "sha256": "3978695f0e664e390dc0cbb0c54e03ce32274ba6d796befd56216eaabc76da7c",
+      "mode": "0644"
+    },
+    {
+      "path": "assets/PROVENANCE.md",
+      "sha256": "3ee5af1d389a27b1abe541b39659bc28755dcdfda4bb88d483ebbe20839f8b66",
+      "mode": "0644"
+    },
+    {
+      "path": "commands/secretary.md",
+      "sha256": "e00e23df33067cc2304f4fede554725272e07925df01a86d121abb67d2ae5ed8",
+      "mode": "0644"
+    },
+    {
+      "path": "contracts/secretary-core.md",
+      "sha256": "437082f41c47e9cbc9fff97f7899c91830d2825a967e25b283ca8d11f2bb29f7",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/architecture.md",
+      "sha256": "ea83035c246ccdef255f87e007d0d2935cd9c037e83d58cffaccfed6fef5f630",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/claim-rights-review.md",
+      "sha256": "5e920c483d3b1506bce45dda19569744e25153b8bf01eae29a6377fd08197270",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/claim-support-review.md",
+      "sha256": "5759cc14acba657c53b35843ba0acfd310e2b6083a711296f1560fc3be96bcf5",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/cli.md",
+      "sha256": "305043805da7856c1b285977061134e1c9cfec625bcd821a1a72ff8e159988b0",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/evidence-workflow.md",
+      "sha256": "00dc34cf57ce9fc46863291f82c88701a2bc9db3e7d42e3409c2d05264943f71",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/gauntlet-quality-protocol.md",
+      "sha256": "2ec37e79d53bd7080e2ad6f4f35bee1400d4aa9993600c52cc740ff18a418af8",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/github-public-settings.md",
+      "sha256": "7563f0c5b415f18d5d55f51e961d5ad87e7a3b10234ddf281525719bd98aad95",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/personalization.md",
+      "sha256": "ff881547c63f9e2aedbb9c76c505232a98c6c0d8403025b5f9372269249ffe71",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/printing-press-integration.md",
+      "sha256": "ba5576c5f829a27f602507fc629547482e71c3160459861b4ef1a0a2a5721fea",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/profile-catalog.md",
+      "sha256": "68155e2bc77942e8aca638ac57fe83186da8270dd9cfd86de9109426536b9955",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/public-export.md",
+      "sha256": "284f2723f152d08bbfb6a8ae267ac7da56ea773541e3863371f34f934c146971",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/repository-metadata.md",
+      "sha256": "f06c8fd48017930c9e71c34dac8fef83c0218248dcad259257f0ac7420da67fe",
+      "mode": "0644"
+    },
+    {
+      "path": "examples/quality-baseline.md",
+      "sha256": "7e9165e93345179cb8bdfd0c0aba50456f230ea929c9b719320e3f1fd8757099",
+      "mode": "0644"
+    },
+    {
+      "path": "examples/quality-job.json",
+      "sha256": "e812516519780ad49774dd0c764df92fc5e03ac2cb1ca0778a902418211f1461",
+      "mode": "0644"
+    },
+    {
+      "path": "examples/quality-reference.md",
+      "sha256": "1abb6629b20f9aa08d444cdb2e3d0d6e83573eb6851d31dc79d561e511c65c2d",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/adapters/file-write.mjs",
+      "sha256": "34737086f4873ca6436c41ea4dbf86c90489c70b002868bd66a97a96994a7d92",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/approvals.mjs",
+      "sha256": "c99374be005e421af0cfafd2695d32cb44afee556a7fa70e0256b31a69b14e83",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/backends/claude.mjs",
+      "sha256": "6f32bb02cdabcc71f3d2e6a6bc347b4f839444f5e2c2259d77a8a645cdf1f589",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/backends/codex.mjs",
+      "sha256": "9de16cb20b2acfbce823c41a12ff224a335c142d30751012e2b7642fdfda39aa",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/brain-manifest.mjs",
+      "sha256": "5f3ee46a66901d4832fe37c9493fda2a23264b712c61d3824de04c0f1b730a8a",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/brain-retrieval.mjs",
+      "sha256": "2c9cb1f96b97951b789aa6871f4648de5b5956259bccf70f79d8310cd3fc9981",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/core.mjs",
+      "sha256": "154f34e55e1d39ac87b1a0bcf2e6b483fff7753f20a244237c8b612d58745feb",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/evidence.mjs",
+      "sha256": "d53695be9154dfd6abfb25ee42436a30370e603f218d1aa49f07bd3ffc15d71e",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/personalization.mjs",
+      "sha256": "f26bd6d55ac608186874e7b0d36c071f69a4eb721db85ce3cec5ae6bd270c346",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/process.mjs",
+      "sha256": "c15e965ae8331d589154e9f05887d75fd9c8bffa232304ce5bcce28424d2e640",
+      "mode": "0644"
+    },
+    {
+      "path": "lib/quality.mjs",
+      "sha256": "567d0a4d1c29e106859d5ddeffdb2904877cfcf0caaefcc939568e71f258aa75",
+      "mode": "0644"
+    },
+    {
+      "path": "package.json",
+      "sha256": "47bbfaa9c560d7003c6232aacb137194652a1dc2f916bc0e07a53a459902ffea",
+      "mode": "0644"
+    },
+    {
+      "path": "profiles/agent-chief-of-staff.json",
+      "sha256": "3fbd35c07353bbecd79df7425fed361b35a217232ba60d4a35be0b23437a33bc",
+      "mode": "0644"
+    },
+    {
+      "path": "profiles/communications-secretary.json",
+      "sha256": "fa655ee58940d0496621ad2a4c5bebbe4ac4e9ed914eea066a779a54bdfe05c3",
+      "mode": "0644"
+    },
+    {
+      "path": "profiles/general-secretary.json",
+      "sha256": "ad88b21b7ec6ed25571f960d5eca9289e8015685e68cd4ca92d32e92df3a0b02",
+      "mode": "0644"
+    },
+    {
+      "path": "profiles/operations-secretary.json",
+      "sha256": "5916e12be3369356a0f89cbd941cc1f644a7d821cb4d8cc85b39a8295748593c",
+      "mode": "0644"
+    },
+    {
+      "path": "profiles/research-secretary.json",
+      "sha256": "0ad75b3bca46e078142c46f82d25c5d918149772c6cd1b0dbe3b77e4ea3ab29e",
+      "mode": "0644"
+    },
+    {
+      "path": "references/CONFIDENCE_TAGS.md",
+      "sha256": "b602aae6d70ef16887f83bde6efd562d1c4564392528c7788afac0bf6f0fe65b",
+      "mode": "0644"
+    },
+    {
+      "path": "references/brain-manifest.json",
+      "sha256": "8fb31bb7dc1ab4425cd49723d7228b9ad68f87d24d0e4f04e2445ea64a64f7a8",
+      "mode": "0644"
+    },
+    {
+      "path": "references/claim-evidence.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "mode": "0644"
+    },
+    {
+      "path": "references/claim-evidence.schema.json",
+      "sha256": "cc6a6c78226325e56965e6b796822e483a83f9715c090158b05ea66ec813673c",
+      "mode": "0644"
+    },
+    {
+      "path": "references/claim-ledger.md",
+      "sha256": "82eccfca28214d1757c3de50de896350a99d1d2c23b0163deb90f56b0ade2017",
+      "mode": "0644"
+    },
+    {
+      "path": "references/public-export.json",
+      "sha256": "52ec7c2701a04eefcc34701c0f9e858becfb0231dcc3405f95e4f889a36b6717",
+      "mode": "0644"
+    },
+    {
+      "path": "references/research-digest.md",
+      "sha256": "8367ca55dcff6bf77cd1c5836985291efba1a00cb289e998f4a68a00ed59f32a",
+      "mode": "0644"
+    },
+    {
+      "path": "references/source-ledger.json",
+      "sha256": "307e3eed4fbb4dcca3a4967adc7e5337c188bd43c81e6c2f29453eee098a2631",
+      "mode": "0644"
+    },
+    {
+      "path": "references/source-ledger.md",
+      "sha256": "1854bf31dced343e84db9a4b25b0134d5bd9e53fcd5c02feb68f8d9a3c091e31",
+      "mode": "0644"
+    },
+    {
+      "path": "references/source-types.json",
+      "sha256": "af7092b06a8097da9ae4ae904eedc80684c186ee7f27f0c956df71062abbfdda",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/audit-event.json",
+      "sha256": "897d26a88bce41009d9be47fbd7476cae2e0cc182be48203ee02ddd2f5fb0f27",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/principal-consent.v1.json",
+      "sha256": "bc78eb7e1be7915a2fdc6e8b7277fd6dbca57649f870b0f9e9f1e01921a4b925",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/principal-profile.v1.json",
+      "sha256": "824c6a6d75bae55a6e185430316a1dfef933323c7228c47fc95459b907f62cdd",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/profile.json",
+      "sha256": "45e9f36189d3a7f7579e389c6b20b81edb3e2f2cce10c1abb35e5e62726786a1",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/quality-job.v1.json",
+      "sha256": "4116708f40c24ebc1c7fffe06e3158f23d32ae2908268ee024941e31f5ac9448",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/quality-review-result.v1.json",
+      "sha256": "e0d82182e2b19af11b7dd19a5838d9918d2a2d9b5346c18882c60398efe3e35f",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/run-request.json",
+      "sha256": "5bd63cc74e3b5525c394cc194ed0c834cfcf79d7508ffafef8727bb61b157884",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/run-result.json",
+      "sha256": "192170a9958e018468462d36447cdde47e8c88e0b5a372c08a09e769cd76f15d",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/run-state.json",
+      "sha256": "18971314f06906a863fad9166100db5fe66c73e77328d7d1d104f9c7d950df57",
+      "mode": "0644"
+    },
+    {
+      "path": "schemas/source-ledger.json",
+      "sha256": "0ae9a853ff943e011bd77b950975759cc0d4213f6d73f05259ac4653a37d2637",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/check-evidence.mjs",
+      "sha256": "8afb81f5253c236655bda5f6e00806b8392a4566c6219b3b27d26f0ef515053f",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/check-generated.mjs",
+      "sha256": "39a43d8252af3df8b026ac49b29d28cdaef292de8578b7e86d5afd9c13e8eb52",
+      "mode": "0755"
+    },
+    {
+      "path": "scripts/check-links.mjs",
+      "sha256": "a69727b3716920bdaf11f8a3b5717bd030f1d965344d556da898d11446eb9b95",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/check-source-types.mjs",
+      "sha256": "94b2f27ff0d90b54ddb4c75d94ead380ca8f7964e0a698f9b1d57bcb59dd1d5d",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/generate-brain-manifest.mjs",
+      "sha256": "53d5977b2db89471fd9aebdcedb154790a2ca2dc069e49bfa658bb85fa35a2c8",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/generate-source-ledger.mjs",
+      "sha256": "36cb3f4743961a5cab6b301992737904d70899bd5ae83dbbedaf648daa89a4bf",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/generate-surfaces.mjs",
+      "sha256": "70cacdb9b98f0b07801c1f3911173a9285e363f9b4c4dae8488c598fce4bf445",
+      "mode": "0755"
+    },
+    {
+      "path": "scripts/install.mjs",
+      "sha256": "8713a095485459e60a0e6b91902ad0bf0e66f45affe4710146fe73b62ee512d0",
+      "mode": "0755"
+    },
+    {
+      "path": "scripts/public-archive.mjs",
+      "sha256": "32e568dc1d039f3c519f62388c269226813654a7038bfc80302c51089ef1b3c0",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/public-export.mjs",
+      "sha256": "3761f442a03ce682d02c1df296f6e99138dee8037bb038e1dac5452844d5ed24",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/public-ready.mjs",
+      "sha256": "1d3d58d5a85c579076eea5c9f3ac0cfddcbc68c74b6ce95d481e2870b73ce57a",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/release-hygiene.mjs",
+      "sha256": "81a4cb3057cda13c3ef5b4df05b467cd9c3389196200b7b10be8412782337761",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/secretaryctl.mjs",
+      "sha256": "ac915588aa243f8f921c28c5164af1b7b10a6adc098034ff780433a0b769ff37",
+      "mode": "0755"
+    },
+    {
+      "path": "scripts/test.mjs",
+      "sha256": "4597e3a366a8031876b6deb001baec077b8b7eba50531b28a7085e3ed46742e0",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/uninstall.mjs",
+      "sha256": "cac7e4526b78f371ceb0e7834f2dc8cd93d5bdfeb0be7c5abe081b630f18f50a",
+      "mode": "0755"
+    },
+    {
+      "path": "skills/secretary/SKILL.md",
+      "sha256": "c1d95bfe4278acd77c34777bb74e45181b3f33139d49f7c3867afdd2763d7e9d",
+      "mode": "0644"
+    },
+    {
+      "path": "templates/command-aliases.json",
+      "sha256": "36797b30a57565dea8ba39254e7a99df062dc7a2a43ab5a2ef62728f0287eaaa",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/actions.test.mjs",
+      "sha256": "49b91fa33fe2749718f79dd3455c8cca7c48e90f37697da3d5eb8e54eeb593ad",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/adversarial/adversarial.test.mjs",
+      "sha256": "1b717d4ab89151ce7d4b88fb8353197c93f2ea4c34f9ae14c5974662fc2687c5",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/adversarial/corpus.json",
+      "sha256": "41a7479b01d0735c1a86edb5ca2c08f613a5ec86b3cb904eeeafc596a9e8d98a",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/adversarial/live.mjs",
+      "sha256": "6c29378372de03edfb96800a148b9493e04498d72998e35e037d341629d4188d",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/approvals.test.mjs",
+      "sha256": "9ffddcd3052ba05c1bf356e94f1ce20389639ed6bc759558d0b7c242811d3b06",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/backends.test.mjs",
+      "sha256": "4b8dfccc0f882f552deb87658da152fd38461a49d1c5c3c2ce93c5d62f4f1f27",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/README.md",
+      "sha256": "dc60ada31b3f1659b6a9b21ee83469d7abeb542702e8bcf2cca822e73ae5864f",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/assertions.mjs",
+      "sha256": "36e437c97af19c5b7b5d77c80386ff3ceaec25956ff0849934cf337f65e984cf",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/behaviour.test.mjs",
+      "sha256": "62e0d464f8d759a22ed99815edc490ac001b3e81da25d7756e9618cae50a0542",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/fake-backend.mjs",
+      "sha256": "5780de12b2ce195181213d6105ab8ff1970f0d4a16fd21ffb519c294ebcc9d7b",
+      "mode": "0755"
+    },
+    {
+      "path": "tests/behaviour/harness.mjs",
+      "sha256": "f4744cc76fbf491fccf4817225bc7c086b3736a12a475cb330ee1dd2d517c82e",
+      "mode": "0755"
+    },
+    {
+      "path": "tests/behaviour/package.json",
+      "sha256": "dd83e9bf8a42048445f6f3d56509c0aedaab2149c1a3d3635986c61fabcd308b",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/delegated-status-laundering/failing-result.json",
+      "sha256": "98f1335055290945b108b8b454137f3ef5a2f116e4d64716f52e055e670ec460",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/delegated-status-laundering/passing-result.json",
+      "sha256": "26e55886345b283ba7ac227716e791dd3c556ed060525fe90e2e99c06e3f2b2e",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/delegated-status-laundering/scenario.json",
+      "sha256": "addb3f31360489fdfa531949c05140ead5d025b0a26cfc557e15b40f076b1503",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/delegated-status-laundering/task.md",
+      "sha256": "c3ed9ebb7bd0c88b9f6e99752d087520b90c7395c6405524c757541275becb8c",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/delegated-status-laundering/workspace/delegation-status.md",
+      "sha256": "aecf53a01efaa1031b6b946eb5231b956bc22899ca8a7e50527b50652a619725",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/march-launch-contradiction/failing-result.json",
+      "sha256": "ffc05693ffdfe5f82fe423a3f0f64c3e9251a83b3e4754a901bdb771e9d4f3f0",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/march-launch-contradiction/passing-result.json",
+      "sha256": "1bdd9c97b485c968ce39d7f14bdceaa0ea71c1f9c81e824ead33418946b17040",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/march-launch-contradiction/scenario.json",
+      "sha256": "2d658385fe87bfb4932a632c6512170f00642d8f5f3ebbfd321663978e66e645",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/march-launch-contradiction/task.md",
+      "sha256": "7a8fdd46d624d3126ac9c95bf29a5f2f121f75fb826d9b2a8e60ab7e5777b082",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/march-launch-contradiction/workspace/engineering-status.md",
+      "sha256": "d29ceff2aa490911f7db60cdb249aa52e7c51ec0e997a261b02e42ccd937cdc9",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/behaviour/scenarios/march-launch-contradiction/workspace/investor-context.md",
+      "sha256": "4a5514a7e501ff4e37153594cf360f26d7085f4d8dd499c67cd874c5663734be",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/brain-retrieval.test.mjs",
+      "sha256": "7ad0f781defe9e973ca0a58d1e0c572d92611fc5e753ad226a30b83c31570c4e",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/brain.test.mjs",
+      "sha256": "ca06fd0446a3a2fd532d4098801f2546bb0fe35d29999024fe64fe9d83e71b92",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/contracts.test.mjs",
+      "sha256": "06a14f3e29b751dab047952205055ee98d14c6d1f7c82f110933453ec3c70263",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/controller.test.mjs",
+      "sha256": "8aff1a7175f2509755710c7d19ad39550596953c097d32f59045176029abaf83",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/core.test.mjs",
+      "sha256": "912a6927f5979a39c48b0fe6070e9d82937e205489c112bb560a2640ffca9b84",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/evidence-gate.test.mjs",
+      "sha256": "194fec5684d3216159d27f1a4271e6a25ddc6b0b918806e2aeee6bd3b86c0ef5",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/claude-is-error.json",
+      "sha256": "09ee7c2d9222d40aef76a875a22260d80e83ab08818fb7cc47d183fb3cd5f083",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/claude-option-validation.stderr.txt",
+      "sha256": "bf0fc5f1d01bda60de0cb48980e789c4eea97b29f527b684ccf177a0cc7ac3a0",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/claude-subtype-success-is-error.json",
+      "sha256": "6d670fa5bbb794c2bf525fa8b95f83b9ff736338a436cb458cc6991a2b91ae0f",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/claude-success.json",
+      "sha256": "1722fe9c7c731aa750b86673a0555771a99a0dfa64973574ca493469d73dec31",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/codex-nonfatal-error.jsonl",
+      "sha256": "1ad3769550e98388bc3f9478a675ebd9e5028d570cdaecc7948bdb6027bde6ca",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/codex-success.jsonl",
+      "sha256": "df9277e9653c3870402c19a273e03f4c784a828703ee865ccdadc2cdd9a30e43",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/codex-turn-failed.jsonl",
+      "sha256": "6541ece185f52d1026a61eccf5da212ee39faaff55470302862cc1a2e685b50d",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/codex-waiting-only.jsonl",
+      "sha256": "7622a787206df80f88746a0c676a13497731fac20237f96d8679f20ac932ba64",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/evidence/references/claim-evidence.json",
+      "sha256": "2f8ca88cddf9674cf79dac4fcb986cbf7b412e11ef9ffeabadfbf854dc8480fd",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/evidence/references/evidence/synthetic-source/extract.md",
+      "sha256": "767344c5f3453d3ecb355fd38fbb2a9cbae1bfcd7eead60e76fc26c8f2cd682c",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/evidence/references/source-ledger.json",
+      "sha256": "cfb2f163a61d0efbc121a2e55b005de33d72d92882fbd3f62f1c1098527005c5",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/fake-cli.mjs",
+      "sha256": "eeaa6771b35d88a3fa7f5199ac72580c0141cc441fa2dc72224863f8e0bc6d53",
+      "mode": "0755"
+    },
+    {
+      "path": "tests/fixtures/source-types/free-text.json",
+      "sha256": "8ba176640c4de85d2b5ea4c49346c1f896adee8df0b14f6ee64ff83052051c2b",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/source-types/missing-source-type.json",
+      "sha256": "5eb76b7868ed7eb4d3f42a402bebbacec38c4f7df82938b9ff8424a04e99b51e",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/source-types/near-miss.json",
+      "sha256": "9acde20dccfdf881fecbb553c1ed3b773ce6aeec984c9ad1f99d78ea36b742e2",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/source-types/valid.json",
+      "sha256": "17040df025257b912b5fdd7e49f2260ee58fa4ed8ada515ef84e9dda37455eaa",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/fixtures/stubborn-child.mjs",
+      "sha256": "5c576d0b600446bb87b7dabd2beb1fb7790f5c6c4d5bf25d23552b6b4560f10d",
+      "mode": "0755"
+    },
+    {
+      "path": "tests/generated.test.mjs",
+      "sha256": "f61dbf28d0b31fb2d0a9677dd0f122e48be73def02f4990c34d6c0e7dc6e1a02",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/install-uninstall-cli.test.mjs",
+      "sha256": "e2a4464d64809656247f430342054c98f72549d1d980111c1583ee1e1cca1f71",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/links.test.mjs",
+      "sha256": "0528636bd839465d94967471842668bcc8bbb14db747eb9dacfc5e819fbf4a72",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/live-smoke.mjs",
+      "sha256": "47ddac80b6d11ce3eca3399847e8b7bdf6554ca8465ee9242ff7d80aaa7a52f8",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/personalization.test.mjs",
+      "sha256": "f3db87a8a64ec27ae3c1baa0980f9957b66439a150f565de0a19f3ae672cbb51",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/principal-cli.test.mjs",
+      "sha256": "180b5de160d9383949306532028eb287a9092d28126d45e4c675f560cdc69883",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/public-export.test.mjs",
+      "sha256": "3adab510aae531067a80c5db4e7f023b9f90a1386ea0424b89787257956582c5",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/public-ready.test.mjs",
+      "sha256": "837c3430c566d3542bda490dae02b350d14118fd619ef0e18a1fcb33018f3dfe",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/quality.test.mjs",
+      "sha256": "33c1cf9885d365853591099bd8eb31aaa6e2a3b6f033a9af46b2ff7a2aca3bd3",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/release-hygiene.test.mjs",
+      "sha256": "cef57ba97bbeab9981464435918d157df126fdd93c53587b554d8e2692f2f44d",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/source-types.test.mjs",
+      "sha256": "b62aca0e695f11a1fb1197060ba8a737154a5b001b30e2c2eee53a8e4b895f1a",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/state.test.mjs",
+      "sha256": "9678ceb7b80182faa4f00c89229ace765594de7c1bcfe91ff593cddf94b9e4c3",
+      "mode": "0644"
+    },
+    {
+      "path": "tests/test-runner.test.mjs",
+      "sha256": "880c42739f3c90e6267751cdc6ffaf9614a84ca980813f216d0d42cf1d410ae8",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/BLUF and Numeric Writing Constraints.md",
+      "sha256": "163c7ffbe83a0e694f4e1dde0fa79ef070e163019a03145d3db79e3135a0926f",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/Bad-News Routing.md",
+      "sha256": "bf4c16b4bc9fba5e54b4efdd798632cb69fb05a082031624e1eeffa30e27dc53",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/Briefing and Debriefing.md",
+      "sha256": "9a4a03bc0831206350d66c71a8f70e02e5974eda853bc43582b1cd7130da674c",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/I-PASS Briefing Schema.md",
+      "sha256": "0d0c369e6ebaa6a84ff31abc35282fdfaf9321f5fb228802ca060288a75968ea",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/Ministerial Decision Memo.md",
+      "sha256": "08cb3d7f4324713d7cd3ef535db91492cd8926e70b40256a4758434a1b918f33",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/No-Surprises Protocol.md",
+      "sha256": "ea336d4d3d642c4fbe469983614569aa944bc86ac88af2a8d8ef3bed60e7f05f",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/communication/_index.md",
+      "sha256": "6a2b6660210c305efe1fbf7c49fbada50d0ac56d5208b4b33bbf166e3c839a2d",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/duties/CEO Time-Use Baseline.md",
+      "sha256": "487c0b4c8b8270632cae41a1988120030dc57415c0aef55abc7ec51ba0b75450",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/duties/Correspondence SLA Regime.md",
+      "sha256": "19b8f3bff1d36ef017a782ea480c2eb71ea66b51232796cdd613f29d2bcce042",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/duties/Duty Taxonomy and Priority.md",
+      "sha256": "a6a7b8bfecc711d6c3580c11dde435c6be51e8480ce7f2c7078038b72638a1cc",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/duties/Paper Flow and Calendar Horizons.md",
+      "sha256": "b8a6331ee8202eedcde79e387a201a264c2ffa27129080d4596a15c7f70c1cec",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/duties/_index.md",
+      "sha256": "dccc58d37df689feeef747013118f3900cf3e1308cf685356178f72365f973bb",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/Branches and Sequels.md",
+      "sha256": "95c316a5d8fd29c5be9724f831aef2ed38dc866e98432af5d71e59a83e4594df",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/CCIR.md",
+      "sha256": "bc4abdf4a9d0ddeaef036aa2282cb268656de45109b7085c670137476995f6f7",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/PACE Graded Assertiveness.md",
+      "sha256": "24438ae8ace22ca43db8aff366ea3fe3190379996f31b159bb1c2a1682032d08",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/Three-Way Escalation.md",
+      "sha256": "4734e0ebaa113ab2cea9fc078d839f45c9c4574f43cd2b3a5c27af424913ad9f",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/Threshold Design.md",
+      "sha256": "357d3aadb0fb4fdabe23b5b0d96f9d8ce9476d4b5a05045fcbd3b8648989415b",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/Two-Challenge Rule.md",
+      "sha256": "9133594c4ed093c1b663c5bbbd585bd007bd2941cb2d25271f2cc144d71ca816",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/escalation/_index.md",
+      "sha256": "e8c87379287ff1a572f3e5ea3bcee81e04e0c875d040cc83f36de47cae27d264",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/ethics/Agency Authority Boundaries.md",
+      "sha256": "fc4b9e14cfb35721428d592718dbc3d32a86fda5b12fecf680e17b950eed90a8",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/ethics/Authority Review Checklist.md",
+      "sha256": "26ad9050b1f1f830be7a401549fa4f32faf5c9aba3d408a9a14fd3c44cc04b34",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/ethics/Civil Service Values.md",
+      "sha256": "28b706448622c0a92b69c6cbc66b26ebcdb9ff47c3859ea68da0b7e7c84ce323",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/ethics/Confidentiality and Attribution.md",
+      "sha256": "674c73b6fc7130ea018fe992de9fc1f9d80899a984607729ea3a8f605ef91e2a",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/ethics/NALA Prohibition Set.md",
+      "sha256": "6bf817ccc52b0f08aeb6531d6c55a1279936184379852518712cad1dc0fca7a2",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/ethics/_index.md",
+      "sha256": "3ec8e05fe01a8b5f6deb40dffec12f44550bfb9704d9fe1fd9746307bf89fc40",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/AI Reliability Failure Modes.md",
+      "sha256": "e9de041ac0f150bfd69eda0c2d4161331120075be471ec317f9b3f31a299e1bf",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/Bounded Dissent and Routine Escalation.md",
+      "sha256": "44ef7cd366b798c2974fdb3b2fcc934a6bd8e2788c1db3b0017d18e3b11d632e",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/Mindguard and Compression.md",
+      "sha256": "62cf367ae5fae4f2eeaa7c26da8101ac9b7a7acaa2efcee8cbf958d1fc0de6d3",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/Private Office Failure Modes.md",
+      "sha256": "1ef1a8bf49f7cb22dcedaf51f4ac8ea0862dfe4cde14fb5ce964c0019d8116dd",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/Prompt Injection and Outbound Isolation.md",
+      "sha256": "f11de9d6a609f5391036cbda2874d6fa3434985b2ea52c42f891be336c7c6a39",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/Psychological Safety and Silence.md",
+      "sha256": "1aac748ab43501385940cb33c1f9d51b78e3804b89979063d5f726817babfccc",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/failure-modes/_index.md",
+      "sha256": "45a154d3cfa635b88a3c6bd83da1d090f161ad750ed9b9c1634a152d2eb38e0e",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/gaps/Meeting Trim Attribution Correction.md",
+      "sha256": "1305f74c3e01fe5d50ea6a0aaf6783e3a45cfe6243a123e77bd4b3f2f698ff80",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/gaps/No Primary Briefing Pack Format.md",
+      "sha256": "abb3094d1e0b68945d3bd332d05864c96390d46386f69b4e37bded73ee25fc94",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/gaps/No Primary Gatekeeping Question Set.md",
+      "sha256": "19fb75efab94e4e331e5c5c945ed74bcd6cc78bf1f41928c49a6af8f443e7b36",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/gaps/No Published Executive Assistant Ethics Code.md",
+      "sha256": "2c9cf45cc64572e93597e9e4e22bddcdc863760d569794ebdba0424accdfaffd",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/gaps/No-Surprises Not in FRC Code.md",
+      "sha256": "f6643a073a1d528076ea2fa77e68f6a320bcd93de90b0759a10cef65bb0e302e",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/gaps/_index.md",
+      "sha256": "73735c7b7b3ad2cdc1c9915d45438e02c067e4dadb86d924bbbcb7fb4f6d52a9",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/hot.md",
+      "sha256": "b757d6e05b0599aba111628dd27ec2e589b652ba640433f64124b91e276ade0d",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/index.md",
+      "sha256": "630d2c1132ba28295bad7c5980c7b808b1593b5734c9a641b36fe8482cc51ce3",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/ESI Resource Counting.md",
+      "sha256": "5cc16926f57e41d63455298a8a739f8388c7dac78a93335fc74eca17f39cf86c",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Emotional Intelligence as Predictor.md",
+      "sha256": "8a90684abf919af00aad380c18d67ece9adbf0717343dbb8e83adc66d533938e",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Manchester Triage Architecture.md",
+      "sha256": "29cb6ebb3e9b25f31c12e8cc9469769031769d9fe05a7cedcf9d1e2296fa38fb",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Perspective Getting and Accuracy.md",
+      "sha256": "0bd52b964755f2aafc3dd319b5321523bd12c962d7dfd03ec4498805b1336995",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Printing Press Tool Discovery.md",
+      "sha256": "80d40a633fb5d4f67db2ce57e9c0d8b1e2d21e0518912e8fe741f4bcb479db29",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Reference-Class Forecasting.md",
+      "sha256": "19c32d7947a19339812cbef854eb15770e773ea7ee8dc6f664b295c6d5243f61",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Reversibility as the Master Gate.md",
+      "sha256": "8c6f26786b697449e3c206da5766fd8163ddee97973db47571ca59754c9fddc9",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Satisficing.md",
+      "sha256": "01aa062374f77a4a06cadcd6d7e234aa49b3546781d4f1c7a152021b4f78e96d",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Seven Delegation Levels.md",
+      "sha256": "32cf12bf8d5308b00177a19e75bef5042b359114a9f9d52d57ccbd74d9cd3275",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Threat and Error Management.md",
+      "sha256": "1d3459df7b00306d301fb0b84cff7930c4c0372c793d961b42c5d5b5f60f54dd",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/Urgency and Importance.md",
+      "sha256": "ae222db333e750a1d3e000dadbb26f68724c0b4da2c446df097d5f9192fef424",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/judgment/_index.md",
+      "sha256": "325181774ad5d2ea8c8de55b72b65b3f99fbccd479fd7747801f9acf16c5073a",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/log.md",
+      "sha256": "c2be7cf0d80e2adf154d31710ab2b1b6817122c1963116e2668dacef33ebaec6",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/meta/CONVENTIONS.md",
+      "sha256": "a90bcac8c7dc33e762677ae25f8a9c5a9cd03902e83142975aabf0f46a6d8535",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/meta/Tag Taxonomy.md",
+      "sha256": "0977a46d9aa143aba15909b8a9d9ee259a7f9b7ccd82110ecb731c9d301301d5",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/Local Briefing Pack House Format.md",
+      "sha256": "0697801855e316054a95cd638ef5467adab48fcb19e6bb5550fad4e6eb368bd9",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/Missing Primary Source Locators.md",
+      "sha256": "8d6978e6b8a87d81486af8c77f7cf26689dfb97d903990834beb53102887e761",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/Primary Records for 2026 Injection Incidents.md",
+      "sha256": "22debd8486dc304a2624527c8eec7c78fc18f67762457576a907f94aa7ae3eb8",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/Principal CCIR Candidates.md",
+      "sha256": "b935309d58e693a934f26ac6a561dfdce8864b25aba15b9f617b25f56d7df6f2",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/Reference-Class Baselines.md",
+      "sha256": "3b926749a836263dde408ea9a5b7074ff3ce2213bf8e8a4cd1910980b4cea325",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/Unspecified Judgment Instruments.md",
+      "sha256": "301cba2e6ef401198f67a1be71d7ae6dab7408b7de1ab71c2fbbc0ed74d3aed8",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/questions/_index.md",
+      "sha256": "aa9744f35d12dc41cbb45a9ca54fda6de997b8ecc7c4c9cccf52ebcdcca52fae",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/roles/Completed Staff Work and Authority.md",
+      "sha256": "7959857a4db426e4ebd540d9a6793b51aea5027081d82d50376d33a2b0df79c3",
+      "mode": "0644"
+    },
+    {
+      "path": "wiki/roles/_index.md",
+      "sha256": "903db8200aeb84264b082c16198f166acb749b9ef4e26592064b372bb43cdb02",
+      "mode": "0644"
+    }
+  ]
+}

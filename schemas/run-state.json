@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/run-state.json",
+  "title": "Secretary run state",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "phase", "backend", "created_at", "updated_at", "revision", "pid", "pgid", "error"],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{7,127}$"},
+    "phase": {"type": "string", "enum": ["prepared", "preflighting", "running", "awaiting_approval", "approved", "executing", "executed", "expired", "succeeded", "failed", "cancelling", "cancelled"]},
+    "backend": {"type": "string", "enum": ["claude", "codex"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"},
+    "revision": {"type": "integer", "minimum": 0},
+    "pid": {"type": ["integer", "null"], "minimum": 1},
+    "pgid": {"type": ["integer", "null"], "minimum": 1},
+    "error": {"type": ["string", "null"]}
+  }
+}

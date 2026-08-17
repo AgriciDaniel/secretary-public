@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/references/claim-evidence.schema.json",
+  "title": "Secretary claim evidence",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["claim_id", "note_path", "source_id", "locator", "extract_sha256", "locator_verification", "support_attestation"],
+    "properties": {
+      "claim_id": {"type": "string", "minLength": 1},
+      "note_path": {"type": "string", "pattern": "^wiki/[^\\r\\n\\\\]+\\.md$"},
+      "source_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+      "locator": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["exact", "prefix", "suffix"],
+        "properties": {
+          "exact": {"type": "string", "minLength": 1},
+          "prefix": {"type": "string", "maxLength": 32},
+          "suffix": {"type": "string", "maxLength": 32}
+        }
+      },
+      "extract_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+      "locator_verification": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["method", "actor_type", "verified_by", "verified_at"],
+        "properties": {
+          "method": {"type": "string", "const": "raw_bytes_exact_match"},
+          "actor_type": {"type": "string", "enum": ["human", "assistant", "tool"]},
+          "verified_by": {"type": "string", "minLength": 1},
+          "verified_at": {"type": "string", "format": "date-time"}
+        }
+      },
+      "support_attestation": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["status", "attester_type", "attested_by", "attested_at"],
+        "properties": {
+          "status": {"type": "string", "enum": ["pending", "supports", "partial", "insufficient"]},
+          "attester_type": {"type": "string", "enum": ["none", "human"]},
+          "attested_by": {"type": ["string", "null"]},
+          "attested_at": {"type": ["string", "null"], "format": "date-time"}
+        }
+      },
+      "archive_url": {"type": "string", "pattern": "^https://"},
+      "archive_date": {"type": "string", "format": "date"},
+      "access_status": {"type": "string", "minLength": 1}
+    }
+  }
+}

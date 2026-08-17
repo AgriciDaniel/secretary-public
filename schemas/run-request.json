@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/run-request.json",
+  "title": "Secretary run request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "backend", "profile_id", "profile_source", "task_file", "task_sha256", "workspace", "prompt_file", "prompt_sha256", "personalization_file", "personalization_sha256", "personalization_snapshot_sha256", "evidence_manifest_file", "evidence_manifest_sha256", "result_schema_file", "result_schema_sha256", "created_at"],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{7,127}$"},
+    "backend": {"type": "string", "enum": ["claude", "codex"]},
+    "profile_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,63}$"},
+    "profile_source": {"type": "string", "enum": ["explicit", "personalization", "built_in_default"]},
+    "task_file": {"type": "string", "minLength": 1},
+    "task_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "workspace": {"type": "string", "minLength": 1},
+    "prompt_file": {"type": "string", "minLength": 1},
+    "prompt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "personalization_file": {"type": ["string", "null"], "minLength": 1},
+    "personalization_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "personalization_snapshot_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "evidence_manifest_file": {"type": "string", "minLength": 1},
+    "evidence_manifest_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "result_schema_file": {"type": "string", "minLength": 1},
+    "result_schema_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "created_at": {"type": "string", "format": "date-time"}
+  }
+}

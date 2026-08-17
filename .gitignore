@@ -1,0 +1,24 @@
+.probe/
+node_modules/
+npm-debug.log*
+coverage/
+.secretary-state/
+secretary-state/
+*.tmp
+
+.directory
+.claude/settings.local.json
+.council/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+release/
+
+# Presentation artifacts are outside the first public preview pending rights review.
+presentation/README.md
+presentation/ASSET_PROMPTS.md
+presentation/PRESENTER_SCRIPT.md
+presentation/secretary-overview.html
+presentation/secretary-overview.pdf
+presentation/assets/secretary-evidence-decision.webp
+presentation/assets/secretary-mindguard-thread.webp

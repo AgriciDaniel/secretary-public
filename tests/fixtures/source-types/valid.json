@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "generated": "2026-08-17",
+  "sources": [
+    {
+      "id": "valid-primary-record",
+      "title": "Valid primary record",
+      "url": "https://example.test/record",
+      "source_type": "primary_record",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "evidence-based",
+      "claims": ["Fixture claim"],
+      "binding_authority": "not binding"
+    }
+  ]
+}

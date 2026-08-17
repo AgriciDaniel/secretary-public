@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "generated": "2026-08-17",
+  "sources": [
+    {
+      "id": "near-miss-source",
+      "title": "Near-miss source",
+      "url": "https://example.test/near-miss",
+      "source_type": "official",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "institutional",
+      "claims": ["Fixture claim"],
+      "binding_authority": "not binding"
+    }
+  ]
+}

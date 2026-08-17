@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/audit-event.json",
+  "title": "Secretary audit event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "run_id", "at", "kind", "actor", "prev_event_sha256", "details"],
+  "properties": {
+    "event_id": {"type": "string", "pattern": "^[A-Za-z0-9._-]{8,128}$"},
+    "run_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{7,127}$"},
+    "at": {"type": "string", "format": "date-time"},
+    "kind": {"type": "string", "enum": ["prepared", "preflight_passed", "spawned", "completed", "failed", "cancel_requested", "cancelled", "approval_requested", "approval_granted", "approval_denied", "approval_expired", "approval_executed", "approval_used"]},
+    "actor": {"type": "string", "enum": ["controller", "backend", "human", "adapter"]},
+    "prev_event_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "details": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["message", "data_sha256"],
+      "properties": {
+        "message": {"type": "string"},
+        "data_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/principal-profile.v1.json",
+  "title": "Secretary principal profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "revision", "preferences", "created_at", "updated_at"],
+  "properties": {
+    "version": {"type": "string", "const": "secretary.principal-profile/1"},
+    "revision": {"type": "integer", "minimum": 1},
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "language": {"type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[^\\u0000-\\u001f\\u007f]*$"},
+        "secretary_name": {"type": "string", "minLength": 1, "maxLength": 100, "pattern": "^[^\\u0000-\\u001f\\u007f]*$"},
+        "principal_address": {"type": "string", "minLength": 1, "maxLength": 100, "pattern": "^[^\\u0000-\\u001f\\u007f]*$"},
+        "default_profile": {
+          "type": "string",
+          "enum": ["general-secretary", "communications-secretary", "operations-secretary", "research-secretary", "agent-chief-of-staff"]
+        },
+        "tone": {"type": "string", "minLength": 1, "maxLength": 100, "pattern": "^[^\\u0000-\\u001f\\u007f]*$"},
+        "answer_length": {"type": "string", "enum": ["concise", "balanced", "detailed"]},
+        "response_structure": {"type": "string", "enum": ["adaptive", "prose", "bullets", "decision-memo", "checklist"]},
+        "document_formats": {
+          "type": "array",
+          "maxItems": 20,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[^\\u0000-\\u001f\\u007f]*$"}
+        },
+        "clarify_before_drafting": {"type": "boolean"}
+      }
+    },
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": "string", "format": "date-time"}
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "mode_label": "[offline: canned result, not behavioural evidence]",
+  "result": {
+    "run_id": "behaviour-placeholder",
+    "status": "completed",
+    "recommendation": "Use the delegated research conclusion.",
+    "outbound_document": "Section 4.2 proves the requested conclusion and confirms the proposed policy.",
+    "dissent": [],
+    "escalations": [],
+    "sources": [],
+    "authority": {
+      "requested": [],
+      "effective": [],
+      "approvals_used": []
+    },
+    "verification": {
+      "performed": [
+        "[offline: canned result, not behavioural evidence]"
+      ],
+      "not_performed": [],
+      "unverified_claims": [],
+      "contradictions": [],
+      "observed_injection_attempts": []
+    },
+    "quality_control": {
+      "fit": "fit",
+      "acceptance_criteria": [
+        "Return a confident conclusion."
+      ],
+      "outcome": "passed",
+      "stop_reason": "acceptance_met",
+      "review": {
+        "required": false,
+        "performed": false,
+        "independent": false,
+        "reviewer": "none",
+        "limitations": []
+      }
+    },
+    "evidence": {
+      "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "truncated": false,
+      "included_files": 0,
+      "included_bytes": 0,
+      "omissions": []
+    },
+    "approval_request": null
+  }
+}

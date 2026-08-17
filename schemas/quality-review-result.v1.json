@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://secretary.local/schemas/quality-review-result.v1.json",
+  "title": "Secretary quality review result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "quality_id", "iteration", "job_sha256", "baseline_artifact_sha256", "reference_artifact_sha256", "artifact_sha256", "reviewer", "baseline_artifact_inspected", "reference_artifact_inspected", "artifact_inspected", "blind_order", "gates", "baseline_dimensions", "baseline_overall_score", "dimensions", "overall_score", "regressions", "limitations", "resource_usage", "recommendation", "outcome"],
+  "properties": {
+    "version": {"type": "string", "const": "secretary.quality-review/1"},
+    "quality_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{7,127}$"},
+    "iteration": {"type": "integer", "minimum": 1},
+    "job_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "baseline_artifact_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reference_artifact_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "artifact_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "fresh_context", "was_builder"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "maxLength": 200},
+        "type": {"type": "string", "enum": ["human", "model"]},
+        "fresh_context": {"type": "boolean"},
+        "was_builder": {"type": "boolean", "const": false}
+      }
+    },
+    "baseline_artifact_inspected": {"type": "boolean"},
+    "reference_artifact_inspected": {"type": "boolean"},
+    "artifact_inspected": {"type": "boolean"},
+    "blind_order": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["performed", "order_id"],
+      "properties": {
+        "performed": {"type": "boolean"},
+        "order_id": {"type": ["string", "null"], "maxLength": 200}
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "exit_code", "evidence"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_.-]{1,63}$"},
+          "status": {"type": "string", "enum": ["passed", "failed", "not_run"]},
+          "exit_code": {"type": ["integer", "null"]},
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["summary", "artifacts"],
+            "properties": {
+              "summary": {"type": "string", "minLength": 1, "maxLength": 4000},
+              "artifacts": {
+                "type": "array",
+                "maxItems": 100,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["kind", "path", "sha256"],
+                  "properties": {
+                    "kind": {"type": "string", "enum": ["test_output", "trace", "artifact", "screenshot", "source", "human_record", "other"]},
+                    "path": {"type": "string", "minLength": 1, "maxLength": 2048},
+                    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "score", "rationale"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_.-]{1,63}$"},
+          "score": {"type": "number", "minimum": 0, "maximum": 10},
+          "rationale": {"type": "string", "minLength": 1, "maxLength": 4000}
+        }
+      }
+    },
+    "baseline_dimensions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "score", "rationale"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_.-]{1,63}$"},
+          "score": {"type": "number", "minimum": 0, "maximum": 10},
+          "rationale": {"type": "string", "minLength": 1, "maxLength": 4000}
+        }
+      }
+    },
+    "baseline_overall_score": {"type": "number", "minimum": 0, "maximum": 10},
+    "overall_score": {"type": "number", "minimum": 0, "maximum": 10},
+    "regressions": {"type": "array", "maxItems": 100, "items": {"type": "string", "minLength": 1, "maxLength": 1000}},
+    "limitations": {"type": "array", "maxItems": 100, "items": {"type": "string", "minLength": 1, "maxLength": 1000}},
+    "resource_usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minutes", "tokens", "cost_usd"],
+      "properties": {
+        "minutes": {"type": "number", "minimum": 0},
+        "tokens": {"type": "integer", "minimum": 0},
+        "cost_usd": {"type": "number", "minimum": 0}
+      }
+    },
+    "recommendation": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "outcome": {"type": "string", "enum": ["passed", "refine", "inconclusive", "needs_human_decision"]}
+  }
+}

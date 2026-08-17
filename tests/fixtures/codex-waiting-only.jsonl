@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"fixture-thread"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"type":"agent_message","text":"{\"status\":\"waiting\",\"message\":\"delegated research is still running\"}"}}
+{"type":"status","message":"waiting"}

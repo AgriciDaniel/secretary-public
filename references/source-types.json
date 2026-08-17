@@ -1,0 +1,61 @@
+{
+  "governing_rule": "Source type is genre only, not evidentiary strength and not institutional authority. Those are separate concepts (see README section 10). A reputable publisher is not automatically an institutional authority.",
+  "source_types": {
+    "primary_record": {
+      "definition": "The original document, transcript, filing, or dataset itself.",
+      "does_not_include": "Does not include a summary, reproduction, commentary, or interpretation of that record."
+    },
+    "archival_reproduction": {
+      "definition": "A faithful copy, transcript, or recording of a primary record hosted by an archive or research institution.",
+      "does_not_include": "Does not include the original record itself, a summary, commentary, or an interpretation of that record."
+    },
+    "official_publication": {
+      "definition": "Published by the body that has authority over the subject matter.",
+      "does_not_include": "Does not include material merely hosted by a reputable or official publisher that lacks authority over the subject matter."
+    },
+    "regulation_or_rule": {
+      "definition": "Binding rule, statute, or regulation text.",
+      "does_not_include": "Does not include nonbinding guidance, commentary, or a summary of a rule."
+    },
+    "standards_body": {
+      "definition": "A published standard from a recognised standards organisation.",
+      "does_not_include": "Does not include informal guidance or a standard created by a vendor or this project."
+    },
+    "peer_reviewed": {
+      "definition": "Research that went through peer review.",
+      "does_not_include": "Does not include preprints, working papers, or research summaries that were not themselves peer reviewed."
+    },
+    "preprint": {
+      "definition": "Research not peer reviewed.",
+      "does_not_include": "Does not include research published after completing peer review."
+    },
+    "textbook": {
+      "definition": "Textbook or scholarly reference work.",
+      "does_not_include": "Does not include journal research, practitioner writing, or tertiary encyclopedias."
+    },
+    "practitioner_publication": {
+      "definition": "Trade, professional, or practitioner writing.",
+      "does_not_include": "Does not include binding rules, peer-reviewed research, or vendor product documentation."
+    },
+    "vendor_documentation": {
+      "definition": "Product or service documentation from its vendor.",
+      "does_not_include": "Does not include independent analysis, journalism, or unofficial community documentation."
+    },
+    "news_or_magazine": {
+      "definition": "Journalism or magazine writing, including business magazines.",
+      "does_not_include": "Does not include a primary record merely quoted or linked by the article."
+    },
+    "encyclopedia": {
+      "definition": "Tertiary reference work.",
+      "does_not_include": "Does not include primary records, textbooks, or original research cited by the reference work."
+    },
+    "local_synthesis": {
+      "definition": "This project's own inference, which inherits no authority from its inputs.",
+      "does_not_include": "Does not include any external source, even when this project quotes or summarizes it."
+    },
+    "cited_but_unlinked": {
+      "definition": "A real source with no confirmable public locator.",
+      "does_not_include": "Does not include a source with a confirmed public locator or a source whose existence is unverified."
+    }
+  }
+}

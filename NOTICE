@@ -1,0 +1,29 @@
+Secretary third-party notices
+Copyright 2026 Secretary contributors
+
+Apache-2.0 scope
+
+The Apache-2.0 license in LICENSE applies only to Secretary's original code and original prose. It does not grant rights in third-party material reproduced, quoted, adapted, or otherwise incorporated into this repository. Such material remains subject to the rights, notices, and terms of its respective rightsholder.
+
+Third-party material excluded from the Apache-2.0 grant
+
+The research corpus, including references/research-digest.md and related source records, may identify or contain source material from the following organizations and publications. Any quotation, excerpt, reproduction, trademark, logo, or other protected material from these sources is excluded from the Apache-2.0 grant unless an applicable source license expressly permits reuse.
+
+- Harvard Business Review material. Republishing excerpts may require permission. See https://hbr.org/permissions.
+- Amazon shareholder-letter text. Public filing or hosting does not place the authored text under this repository's Apache-2.0 grant.
+- American Law Institute Restatement material and NALA Code of Ethics material. Rights and reproduction terms remain with their respective rightsholders.
+- Chatham House material, including the Chatham House Rule wording. Chatham House terms restrict reuse and commercial exploitation. Do not commercially reuse source text without permission. See https://www.chathamhouse.org/terms-and-conditions.
+- New Zealand Crown Law material. Crown Law's legal notice restricts commercial use without written permission. Do not commercially reuse source text without permission. See https://www.crownlaw.govt.nz/legal.
+- Other cited books, articles, research reports, government records, professional rules, institutional websites, and vendor documentation. Consult each source's terms before reuse.
+
+Visual assets pending owner rights confirmation
+
+The visual files under assets/ are inventoried in assets/PROVENANCE.md. Their Git history and byte hashes establish repository identity only. They do not establish authorship, licence authority, source-tool terms, or third-party clearances. Until the owner completes that record, the files remain pending for public distribution and no Apache-2.0 rights conclusion is made for them.
+
+Open Government Licence v3.0 attribution
+
+Some United Kingdom government material is licensed under the Open Government Licence v3.0. Where that material is reused, attribute the source as identified in the applicable source record and include this statement: "Contains public sector information licensed under the Open Government Licence v3.0." The licence is available at https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/.
+
+No rights assessment is a release approval
+
+This NOTICE records known boundaries. It does not confirm that every historical quotation or visual asset has been removed, licensed, or lawfully reusable. The repository is not release-ready until the citation-integrity, asset-provenance, and third-party-rights work described in README.md is complete.

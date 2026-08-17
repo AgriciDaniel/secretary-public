@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "generated": "2026-08-17",
+  "sources": [
+    {
+      "id": "free-text-source",
+      "title": "Free-text source",
+      "url": "https://example.test/free-text",
+      "source_type": "institutional structure with contested origin",
+      "retrieved": "2026-08-17",
+      "refresh_due": "2027-08-17",
+      "confidence": "contested",
+      "claims": ["Fixture claim"],
+      "binding_authority": "not established"
+    }
+  ]
+}

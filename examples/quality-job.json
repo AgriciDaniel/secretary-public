@@ -1,0 +1,60 @@
+{
+  "version": "secretary.quality-job/1",
+  "quality_id": "example-quality-001",
+  "objective": "Improve the artifact against a frozen, observable acceptance contract.",
+  "baseline": {
+    "path": "quality-baseline.md",
+    "sha256": "7e9165e93345179cb8bdfd0c0aba50456f230ea929c9b719320e3f1fd8757099"
+  },
+  "reference": {
+    "id": "approved-reference",
+    "description": "A concrete reference that the principal has confirmed may be used for comparison.",
+    "path": "quality-reference.md",
+    "sha256": "1abb6629b20f9aa08d444cdb2e3d0d6e83573eb6851d31dc79d561e511c65c2d",
+    "permissible_use_confirmed": true
+  },
+  "acceptance": {
+    "minimum_score": 8,
+    "gates": [
+      {
+        "id": "tests_pass",
+        "kind": "deterministic",
+        "blocking": true,
+        "protected": true,
+        "criterion": "The frozen test command passes against the final artifact."
+      }
+    ],
+    "dimensions": [
+      {
+        "id": "task_fitness",
+        "weight": 1,
+        "criterion": "The artifact satisfies the stated objective without unsupported claims."
+      }
+    ]
+  },
+  "budget": {
+    "max_iterations": 3,
+    "max_minutes": 60,
+    "max_tokens": 100000,
+    "max_cost_usd": 0
+  },
+  "scheduling": {
+    "strategy": "sequential",
+    "coupling_rationale": "The example artifact is tightly coupled and has one integration owner.",
+    "builder_ids": ["builder-1"],
+    "integration_owner": null
+  },
+  "review": {
+    "fresh_context_required": true,
+    "blind_order_required": false,
+    "artifact_inspection_required": true
+  },
+  "stop": {
+    "plateau_window": 2,
+    "minimum_score_delta": 0.2,
+    "stop_on_regression": true
+  },
+  "authority": {
+    "external_actions_require_approval": true
+  }
+}
