@@ -7,12 +7,13 @@ Secretary is experimental. No version is currently warranted for consequential o
 ## Reporting a vulnerability
 
 Use the public repository's Security tab and its private vulnerability-reporting
-form for a sensitive report. This channel is pending: the owner must enable and
-test private vulnerability reporting on the fresh-history public repository
-before publication. If the private form is not visible, do not open a public
-issue containing vulnerability details. Include the affected version or commit,
-the smallest reproducible case, impact, and any known workaround. Do not include
-live credentials, personal data, or third-party secrets.
+form for a sensitive report:
+https://github.com/AgriciDaniel/secretary-public/security/advisories/new.
+The form was enabled and verified from an unauthenticated view on 2026-08-18.
+If the private form is not visible, do not open a public issue containing
+vulnerability details. Include the affected version or commit, the smallest
+reproducible case, impact, and any known workaround. Do not include live
+credentials, personal data, or third-party secrets.
 
 The repository-settings acceptance checklist is maintained in
 [docs/github-public-settings.md](docs/github-public-settings.md). A checked-in
