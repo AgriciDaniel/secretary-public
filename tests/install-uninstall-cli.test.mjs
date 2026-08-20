@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
-import { lstat, mkdtemp, readFile, realpath, symlink, unlink, writeFile } from 'node:fs/promises';
+import { lstat, mkdir, mkdtemp, readFile, realpath, symlink, unlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
@@ -142,4 +142,30 @@ test('uninstall rejects unknown manifested paths and requires exact confirmation
   await writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
   await assert.rejects(() => uninstall({ target, dryRun: true }), /invalid file list|unknown path/u);
   assert.ok((await lstat(path.join(target, 'commands', 'secretary.md'))).isFile());
+});
+
+test('a CRLF source checkout still installs surfaces whose frontmatter starts at the first byte', async () => {
+  const source = await canonicalTemporaryDirectory('secretary-crlf-source-');
+  const target = await canonicalTemporaryDirectory('secretary-crlf-target-');
+  const surfaces = ['commands/secretary.md', 'skills/secretary/SKILL.md', 'agents/secretary.md'];
+
+  await mkdir(path.join(source, 'scripts'), { recursive: true });
+  await writeFile(path.join(source, 'scripts', 'secretaryctl.mjs'), '#!/usr/bin/env node\n');
+  await mkdir(path.join(source, 'templates'), { recursive: true });
+  await writeFile(path.join(source, 'templates', 'command-aliases.json'), `${JSON.stringify({ aliases: [] })}\n`);
+  for (const relative of surfaces) {
+    await mkdir(path.join(source, path.dirname(relative)), { recursive: true });
+    await writeFile(path.join(source, relative), '---\r\nname: secretary\r\ndescription: staff work\r\n---\r\n\r\n# Secretary\r\n');
+  }
+
+  await install({ target, root: source });
+
+  for (const relative of surfaces) {
+    const installed = await readFile(path.join(target, relative), 'utf8');
+    assert.ok(installed.startsWith('---\r\n'), `${relative} must keep YAML frontmatter at the first byte`);
+    assert.match(installed, /^---\r\nname: secretary\r\ndescription: staff work\r\n---\r\n<!-- secretary-owned-surface:v1 -->\n/u);
+  }
+
+  const reinstalled = await install({ target, root: source });
+  assert.equal(reinstalled.target, target);
 });
