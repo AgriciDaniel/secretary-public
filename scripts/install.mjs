@@ -58,21 +58,37 @@ function controllerLink({ sourceRoot, controller }) {
   return `${CONTROLLER_LINK_MARKER}\n\n## Local controller link\n\nThis installed surface is linked to the source checkout recorded below. Invoke the controller as an argument array with \`node\` and the exact \`controller\` value. Before routine use, run \`principal status\`; on the first use, run \`principal init\`. If the controller is missing, moved, a symlink, or not a regular file, stop and tell the user to rerun the installer from the intended checkout. Do not search for another controller or silently fall back to prose-only onboarding.\n\n\`\`\`json\n${record}\n\`\`\`\n`;
 }
 
+// A source checkout can carry CRLF line endings, for example from Git with core.autocrlf
+// enabled on Windows. Matching only "---\n" treats such a surface as having no frontmatter,
+// which places the ownership marker above the frontmatter instead of below it. The host then
+// parses no frontmatter at all and the installed surface loses its name and description.
+const OPENING_FENCE = /^---\r?\n/u;
+const CLOSING_FENCE = /\r?\n---\r?\n/u;
+const RELATIVE_SEPARATOR = /[\\/]/u;
+
+function frontmatterEnd(content) {
+  const opening = OPENING_FENCE.exec(content);
+  if (opening === null) return -1;
+  const closing = CLOSING_FENCE.exec(content.slice(opening[0].length));
+  if (closing === null) return -1;
+  return opening[0].length + closing.index + closing[0].length;
+}
+
 function markedSurface(sourceContent) {
   const body = sourceContent.trimEnd();
-  if (!body.startsWith('---\n')) return `${SURFACE_MARKER}\n\n${body}`;
-  const closing = body.indexOf('\n---\n', 4);
-  if (closing < 0) throw new Error('refusing installed surface with unclosed YAML frontmatter');
-  const boundary = closing + '\n---\n'.length;
+  const boundary = frontmatterEnd(body);
+  if (boundary < 0) {
+    if (OPENING_FENCE.test(body)) throw new Error('refusing installed surface with unclosed YAML frontmatter');
+    return `${SURFACE_MARKER}\n\n${body}`;
+  }
   return `${body.slice(0, boundary)}${SURFACE_MARKER}\n\n${body.slice(boundary)}`;
 }
 
 function isOwnedSurface(content) {
   if (content.startsWith(`${SURFACE_MARKER}\n`)) return true;
-  if (!content.startsWith('---\n')) return false;
-  const closing = content.indexOf('\n---\n', 4);
-  if (closing < 0) return false;
-  return content.slice(closing + '\n---\n'.length).startsWith(`${SURFACE_MARKER}\n`);
+  const boundary = frontmatterEnd(content);
+  if (boundary < 0) return false;
+  return content.slice(boundary).startsWith(`${SURFACE_MARKER}\n`);
 }
 
 async function ensureSafeTarget(target) {
@@ -95,7 +111,10 @@ async function ensureSafeTarget(target) {
 }
 
 async function ensureSafeParent(root, relativeFile) {
-  const segments = path.dirname(relativeFile).split(path.sep).filter(Boolean);
+  // Callers pass repository-relative paths with forward slashes, so splitting on path.sep alone
+  // yields a single "skills/secretary" segment on Windows and the non-recursive mkdir below then
+  // fails with ENOENT whenever an intermediate directory does not already exist.
+  const segments = path.dirname(relativeFile).split(RELATIVE_SEPARATOR).filter(Boolean);
   let current = root;
   for (const segment of segments) {
     current = path.join(current, segment);
